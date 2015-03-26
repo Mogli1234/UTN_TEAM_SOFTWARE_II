@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AccesoDatos
+namespace AccesoDatos.Modelo
 {
     using System;
     using System.Data.Entity;

@@ -7,18 +7,23 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AccesoDatos
+namespace AccesoDatos.Modelo
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class rutinas_deportes
+    public partial class rutina
     {
-        public int id { get; set; }
-        public Nullable<int> rutina_id { get; set; }
-        public Nullable<int> sport_id { get; set; }
+        public rutina()
+        {
+            this.participante_deporte_rutina = new HashSet<participante_deporte_rutina>();
+            this.rutinas_deportes = new HashSet<rutinas_deportes>();
+        }
     
-        public virtual deporte deporte { get; set; }
-        public virtual rutina rutina { get; set; }
+        public int id { get; set; }
+        public string Rutina1 { get; set; }
+    
+        public virtual ICollection<participante_deporte_rutina> participante_deporte_rutina { get; set; }
+        public virtual ICollection<rutinas_deportes> rutinas_deportes { get; set; }
     }
 }
