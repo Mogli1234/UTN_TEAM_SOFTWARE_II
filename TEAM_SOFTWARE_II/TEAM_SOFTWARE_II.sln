@@ -6,6 +6,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDatos", "AccesoDatos\AccesoDatos.csproj", "{F092382D-189B-4FCB-96B6-7A22937D9452}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project_View", "Project_View\Project_View.csproj", "{EA41DB83-453B-4E1D-8656-B19E75C67059}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1817177A-CEDC-432E-8D87-42691C5C2045} = {1817177A-CEDC-432E-8D87-42691C5C2045}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

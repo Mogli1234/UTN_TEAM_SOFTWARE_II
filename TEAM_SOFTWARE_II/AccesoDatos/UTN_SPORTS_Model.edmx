@@ -4,16 +4,303 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl" Namespace="UTN_SPORTS_Model.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005">
-        <EntityContainer Name="UTN_SPORTS_ModelTargetContainer" >
+    <Schema Namespace="UTN_SPORTS_Model.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.1" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="UTN_SPORTS_ModelStoreContainer">
+          <EntitySet Name="deporte" EntityType="UTN_SPORTS_Model.Store.deporte" store:Type="Tables" Schema="db5531f47ad08e4cb1a769a467011017e9" />
+          <EntitySet Name="participante" EntityType="UTN_SPORTS_Model.Store.participante" store:Type="Tables" Schema="db5531f47ad08e4cb1a769a467011017e9" />
+          <EntitySet Name="participante_deporte_rutina" EntityType="UTN_SPORTS_Model.Store.participante_deporte_rutina" store:Type="Tables" Schema="db5531f47ad08e4cb1a769a467011017e9" />
+          <EntitySet Name="rutina" EntityType="UTN_SPORTS_Model.Store.rutina" store:Type="Tables" Schema="db5531f47ad08e4cb1a769a467011017e9" />
+          <EntitySet Name="rutinas_deportes" EntityType="UTN_SPORTS_Model.Store.rutinas_deportes" store:Type="Tables" Schema="db5531f47ad08e4cb1a769a467011017e9" />
+          <EntitySet Name="users" EntityType="UTN_SPORTS_Model.Store.users" store:Type="Tables" Schema="db5531f47ad08e4cb1a769a467011017e9" />
+          <AssociationSet Name="fk_deporte" Association="UTN_SPORTS_Model.Store.fk_deporte">
+            <End Role="deporte" EntitySet="deporte" />
+            <End Role="participante_deporte_rutina" EntitySet="participante_deporte_rutina" />
+          </AssociationSet>
+          <AssociationSet Name="fk_participante" Association="UTN_SPORTS_Model.Store.fk_participante">
+            <End Role="participante" EntitySet="participante" />
+            <End Role="participante_deporte_rutina" EntitySet="participante_deporte_rutina" />
+          </AssociationSet>
+          <AssociationSet Name="fk_rutina" Association="UTN_SPORTS_Model.Store.fk_rutina">
+            <End Role="rutina" EntitySet="rutina" />
+            <End Role="participante_deporte_rutina" EntitySet="participante_deporte_rutina" />
+          </AssociationSet>
+          <AssociationSet Name="fkRutina" Association="UTN_SPORTS_Model.Store.fkRutina">
+            <End Role="rutina" EntitySet="rutina" />
+            <End Role="rutinas_deportes" EntitySet="rutinas_deportes" />
+          </AssociationSet>
+          <AssociationSet Name="fkSport" Association="UTN_SPORTS_Model.Store.fkSport">
+            <End Role="deporte" EntitySet="deporte" />
+            <End Role="rutinas_deportes" EntitySet="rutinas_deportes" />
+          </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+        <EntityType Name="deporte">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Deporte" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="participante">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Nombre" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Primer_Apellido" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="Segundo_Apellido" Type="varchar" MaxLength="30" />
+          <Property Name="Edad" Type="int" />
+          <Property Name="Fecha_Ingreso" Type="varchar" Nullable="false" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="participante_deporte_rutina">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="participante_id" Type="int" Nullable="false" />
+          <Property Name="deporte_id" Type="int" Nullable="false" />
+          <Property Name="rutina_id" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="rutina">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Rutina" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="rutinas_deportes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="rutina_id" Type="int" />
+          <Property Name="sport_id" Type="int" />
+        </EntityType>
+        <EntityType Name="users">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Username" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="Password" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Role" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <Association Name="fk_deporte">
+          <End Role="deporte" Type="UTN_SPORTS_Model.Store.deporte" Multiplicity="1" />
+          <End Role="participante_deporte_rutina" Type="UTN_SPORTS_Model.Store.participante_deporte_rutina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="deporte">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="participante_deporte_rutina">
+              <PropertyRef Name="deporte_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_participante">
+          <End Role="participante" Type="UTN_SPORTS_Model.Store.participante" Multiplicity="1" />
+          <End Role="participante_deporte_rutina" Type="UTN_SPORTS_Model.Store.participante_deporte_rutina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="participante">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="participante_deporte_rutina">
+              <PropertyRef Name="participante_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_rutina">
+          <End Role="rutina" Type="UTN_SPORTS_Model.Store.rutina" Multiplicity="1" />
+          <End Role="participante_deporte_rutina" Type="UTN_SPORTS_Model.Store.participante_deporte_rutina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rutina">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="participante_deporte_rutina">
+              <PropertyRef Name="rutina_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkRutina">
+          <End Role="rutina" Type="UTN_SPORTS_Model.Store.rutina" Multiplicity="0..1" />
+          <End Role="rutinas_deportes" Type="UTN_SPORTS_Model.Store.rutinas_deportes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rutina">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="rutinas_deportes">
+              <PropertyRef Name="rutina_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkSport">
+          <End Role="deporte" Type="UTN_SPORTS_Model.Store.deporte" Multiplicity="0..1" />
+          <End Role="rutinas_deportes" Type="UTN_SPORTS_Model.Store.rutinas_deportes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="deporte">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="rutinas_deportes">
+              <PropertyRef Name="sport_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="UTN_SPORTS_Model" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
         <EntityContainer Name="UTN_SPORTS_ModelContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="deportes" EntityType="UTN_SPORTS_Model.deporte" />
+          <EntitySet Name="participantes" EntityType="UTN_SPORTS_Model.participante" />
+          <EntitySet Name="participante_deporte_rutina" EntityType="UTN_SPORTS_Model.participante_deporte_rutina" />
+          <EntitySet Name="rutinas" EntityType="UTN_SPORTS_Model.rutina" />
+          <EntitySet Name="rutinas_deportes" EntityType="UTN_SPORTS_Model.rutinas_deportes" />
+          <EntitySet Name="users" EntityType="UTN_SPORTS_Model.user" />
+          <AssociationSet Name="fk_deporte" Association="UTN_SPORTS_Model.fk_deporte">
+            <End Role="deporte" EntitySet="deportes" />
+            <End Role="participante_deporte_rutina" EntitySet="participante_deporte_rutina" />
+          </AssociationSet>
+          <AssociationSet Name="fkSport" Association="UTN_SPORTS_Model.fkSport">
+            <End Role="deporte" EntitySet="deportes" />
+            <End Role="rutinas_deportes" EntitySet="rutinas_deportes" />
+          </AssociationSet>
+          <AssociationSet Name="fk_participante" Association="UTN_SPORTS_Model.fk_participante">
+            <End Role="participante" EntitySet="participantes" />
+            <End Role="participante_deporte_rutina" EntitySet="participante_deporte_rutina" />
+          </AssociationSet>
+          <AssociationSet Name="fk_rutina" Association="UTN_SPORTS_Model.fk_rutina">
+            <End Role="rutina" EntitySet="rutinas" />
+            <End Role="participante_deporte_rutina" EntitySet="participante_deporte_rutina" />
+          </AssociationSet>
+          <AssociationSet Name="fkRutina" Association="UTN_SPORTS_Model.fkRutina">
+            <End Role="rutina" EntitySet="rutinas" />
+            <End Role="rutinas_deportes" EntitySet="rutinas_deportes" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="deporte">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Deporte1" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Descripcion" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="participante_deporte_rutina" Relationship="UTN_SPORTS_Model.fk_deporte" FromRole="deporte" ToRole="participante_deporte_rutina" />
+          <NavigationProperty Name="rutinas_deportes" Relationship="UTN_SPORTS_Model.fkSport" FromRole="deporte" ToRole="rutinas_deportes" />
+        </EntityType>
+        <EntityType Name="participante">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Nombre" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Primer_Apellido" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Segundo_Apellido" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="Edad" />
+          <Property Type="String" Name="Fecha_Ingreso" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="participante_deporte_rutina" Relationship="UTN_SPORTS_Model.fk_participante" FromRole="participante" ToRole="participante_deporte_rutina" />
+        </EntityType>
+        <EntityType Name="participante_deporte_rutina">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="participante_id" Nullable="false" />
+          <Property Type="Int32" Name="deporte_id" Nullable="false" />
+          <Property Type="Int32" Name="rutina_id" Nullable="false" />
+          <NavigationProperty Name="deporte" Relationship="UTN_SPORTS_Model.fk_deporte" FromRole="participante_deporte_rutina" ToRole="deporte" />
+          <NavigationProperty Name="participante" Relationship="UTN_SPORTS_Model.fk_participante" FromRole="participante_deporte_rutina" ToRole="participante" />
+          <NavigationProperty Name="rutina" Relationship="UTN_SPORTS_Model.fk_rutina" FromRole="participante_deporte_rutina" ToRole="rutina" />
+        </EntityType>
+        <EntityType Name="rutina">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Rutina1" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="participante_deporte_rutina" Relationship="UTN_SPORTS_Model.fk_rutina" FromRole="rutina" ToRole="participante_deporte_rutina" />
+          <NavigationProperty Name="rutinas_deportes" Relationship="UTN_SPORTS_Model.fkRutina" FromRole="rutina" ToRole="rutinas_deportes" />
+        </EntityType>
+        <EntityType Name="rutinas_deportes">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="rutina_id" />
+          <Property Type="Int32" Name="sport_id" />
+          <NavigationProperty Name="deporte" Relationship="UTN_SPORTS_Model.fkSport" FromRole="rutinas_deportes" ToRole="deporte" />
+          <NavigationProperty Name="rutina" Relationship="UTN_SPORTS_Model.fkRutina" FromRole="rutinas_deportes" ToRole="rutina" />
+        </EntityType>
+        <EntityType Name="user">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Username" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Password" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Email" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="SByte" Name="Role" Nullable="false" />
+        </EntityType>
+        <Association Name="fk_deporte">
+          <End Type="UTN_SPORTS_Model.deporte" Role="deporte" Multiplicity="1" />
+          <End Type="UTN_SPORTS_Model.participante_deporte_rutina" Role="participante_deporte_rutina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="deporte">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="participante_deporte_rutina">
+              <PropertyRef Name="deporte_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkSport">
+          <End Type="UTN_SPORTS_Model.deporte" Role="deporte" Multiplicity="0..1" />
+          <End Type="UTN_SPORTS_Model.rutinas_deportes" Role="rutinas_deportes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="deporte">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="rutinas_deportes">
+              <PropertyRef Name="sport_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_participante">
+          <End Type="UTN_SPORTS_Model.participante" Role="participante" Multiplicity="1" />
+          <End Type="UTN_SPORTS_Model.participante_deporte_rutina" Role="participante_deporte_rutina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="participante">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="participante_deporte_rutina">
+              <PropertyRef Name="participante_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fk_rutina">
+          <End Type="UTN_SPORTS_Model.rutina" Role="rutina" Multiplicity="1" />
+          <End Type="UTN_SPORTS_Model.participante_deporte_rutina" Role="participante_deporte_rutina" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rutina">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="participante_deporte_rutina">
+              <PropertyRef Name="rutina_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="fkRutina">
+          <End Type="UTN_SPORTS_Model.rutina" Role="rutina" Multiplicity="0..1" />
+          <End Type="UTN_SPORTS_Model.rutinas_deportes" Role="rutinas_deportes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="rutina">
+              <PropertyRef Name="id" />
+            </Principal>
+            <Dependent Role="rutinas_deportes">
+              <PropertyRef Name="rutina_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -21,7 +308,66 @@
       <Mapping xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs" Space="C-S">
         <Alias Key="Model" Value="UTN_SPORTS_Model" />
         <Alias Key="Target" Value="UTN_SPORTS_Model.Store" />
-        <EntityContainerMapping CdmEntityContainer="UTN_SPORTS_ModelContainer" StorageEntityContainer="UTN_SPORTS_ModelTargetContainer">
+        <EntityContainerMapping CdmEntityContainer="UTN_SPORTS_ModelContainer" StorageEntityContainer="UTN_SPORTS_ModelStoreContainer">
+          <EntitySetMapping Name="deportes">
+            <EntityTypeMapping TypeName="UTN_SPORTS_Model.deporte">
+              <MappingFragment StoreEntitySet="deporte">
+                <ScalarProperty Name="Descripcion" ColumnName="Descripcion" />
+                <ScalarProperty Name="Deporte1" ColumnName="Deporte" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="participantes">
+            <EntityTypeMapping TypeName="UTN_SPORTS_Model.participante">
+              <MappingFragment StoreEntitySet="participante">
+                <ScalarProperty Name="Fecha_Ingreso" ColumnName="Fecha_Ingreso" />
+                <ScalarProperty Name="Edad" ColumnName="Edad" />
+                <ScalarProperty Name="Segundo_Apellido" ColumnName="Segundo_Apellido" />
+                <ScalarProperty Name="Primer_Apellido" ColumnName="Primer_Apellido" />
+                <ScalarProperty Name="Nombre" ColumnName="Nombre" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="participante_deporte_rutina">
+            <EntityTypeMapping TypeName="UTN_SPORTS_Model.participante_deporte_rutina">
+              <MappingFragment StoreEntitySet="participante_deporte_rutina">
+                <ScalarProperty Name="rutina_id" ColumnName="rutina_id" />
+                <ScalarProperty Name="deporte_id" ColumnName="deporte_id" />
+                <ScalarProperty Name="participante_id" ColumnName="participante_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rutinas">
+            <EntityTypeMapping TypeName="UTN_SPORTS_Model.rutina">
+              <MappingFragment StoreEntitySet="rutina">
+                <ScalarProperty Name="Rutina1" ColumnName="Rutina" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="rutinas_deportes">
+            <EntityTypeMapping TypeName="UTN_SPORTS_Model.rutinas_deportes">
+              <MappingFragment StoreEntitySet="rutinas_deportes">
+                <ScalarProperty Name="sport_id" ColumnName="sport_id" />
+                <ScalarProperty Name="rutina_id" ColumnName="rutina_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="users">
+            <EntityTypeMapping TypeName="UTN_SPORTS_Model.user">
+              <MappingFragment StoreEntitySet="users">
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -38,6 +384,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="True" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Ninguno" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
       </DesignerInfoPropertySet>
     </edmx:Options>
     <!-- Diagram content (shape and connector positions) -->

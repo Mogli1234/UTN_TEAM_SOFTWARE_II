@@ -25,5 +25,11 @@ namespace AccesoDatos
             throw new UnintentionalCodeFirstException();
         }
     
+        public DbSet<deporte> deportes { get; set; }
+        public DbSet<participante> participantes { get; set; }
+        public DbSet<participante_deporte_rutina> participante_deporte_rutina { get; set; }
+        public DbSet<rutina> rutinas { get; set; }
+        public DbSet<rutinas_deportes> rutinas_deportes { get; set; }
+        public DbSet<user> users { get; set; }
     }
 }

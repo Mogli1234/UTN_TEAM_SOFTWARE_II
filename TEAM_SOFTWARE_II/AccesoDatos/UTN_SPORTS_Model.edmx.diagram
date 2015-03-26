@@ -4,7 +4,19 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="384e94e93f1745d7b1c18f6f819c0532" Name="Diagrama1" />
+      <Diagram DiagramId="384e94e93f1745d7b1c18f6f819c0532" Name="Diagrama1" ZoomLevel="86" >
+        <EntityTypeShape EntityType="UTN_SPORTS_Model.deporte" Width="1.5" PointX="0.85123673866094862" PointY="16.182991869832851" />
+        <EntityTypeShape EntityType="UTN_SPORTS_Model.participante" Width="1.5" PointX="11.518411919250346" PointY="0.99877600418346746" />
+        <EntityTypeShape EntityType="UTN_SPORTS_Model.participante_deporte_rutina" Width="1.5" PointX="8.9642992992719179" PointY="25.6586467743193" />
+        <EntityTypeShape EntityType="UTN_SPORTS_Model.rutina" Width="1.5" PointX="11.557060360702248" PointY="30.519525080229865" />
+        <EntityTypeShape EntityType="UTN_SPORTS_Model.rutinas_deportes" Width="1.5" PointX="3.3021983389287248" PointY="16.71216609362148" />
+        <EntityTypeShape EntityType="UTN_SPORTS_Model.user" Width="1.5" PointX="2.25" PointY="4.875" />
+        <AssociationConnector Association="UTN_SPORTS_Model.fk_deporte" />
+        <AssociationConnector Association="UTN_SPORTS_Model.fkSport" />
+        <AssociationConnector Association="UTN_SPORTS_Model.fk_participante" />
+        <AssociationConnector Association="UTN_SPORTS_Model.fk_rutina" />
+        <AssociationConnector Association="UTN_SPORTS_Model.fkRutina" />
+      </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
 </edmx:Edmx>

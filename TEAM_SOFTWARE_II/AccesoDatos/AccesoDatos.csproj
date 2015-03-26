@@ -46,7 +46,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="deporte.cs">
+      <DependentUpon>UTN_SPORTS_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="participante.cs">
+      <DependentUpon>UTN_SPORTS_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="participante_deporte_rutina.cs">
+      <DependentUpon>UTN_SPORTS_Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="rutina.cs">
+      <DependentUpon>UTN_SPORTS_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="rutinas_deportes.cs">
+      <DependentUpon>UTN_SPORTS_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs">
+      <DependentUpon>UTN_SPORTS_Model.tt</DependentUpon>
+    </Compile>
     <Compile Include="UTN_SPORTS_Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
