@@ -32,7 +32,15 @@ namespace Project_View
         {
             sport.Deporte1 = txtSport.Text;
             sport.Descripcion = txtDescription.Text;
-           
+            if (client.createSport(sport))
+            {
+                MessageBox.Show("Se ha agregado con exito el deporte","SUCESS",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                MessageBox.Show("Ha ocurrido un error a la hora de crear", "FAIL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
+            }
         }
     }
 }

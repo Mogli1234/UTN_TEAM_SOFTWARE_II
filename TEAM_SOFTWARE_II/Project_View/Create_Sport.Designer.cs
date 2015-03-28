@@ -122,6 +122,7 @@
             this.Controls.Add(this.txtSport);
             this.Controls.Add(this.labelX1);
             this.Name = "Create_Sport";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "New Sport";
             this.ResumeLayout(false);
 

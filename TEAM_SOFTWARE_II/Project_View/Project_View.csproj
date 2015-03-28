@@ -91,9 +91,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Service References\Servicios\Project_View.Servicios.CompositeType.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </None>
     <None Include="Service References\Servicios\Service1.wsdl" />
     <None Include="Service References\Servicios\WebService.xsd">
       <SubType>Designer</SubType>

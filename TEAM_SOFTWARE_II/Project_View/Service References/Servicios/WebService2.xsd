@@ -1,10 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/TEAM_SOFTWARE_II" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/TEAM_SOFTWARE_II" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:complexType name="CompositeType">
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/AccesoDatos.Modelo" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AccesoDatos.Modelo" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="deporte">
     <xs:sequence>
-      <xs:element minOccurs="0" name="BoolValue" type="xs:boolean" />
-      <xs:element minOccurs="0" name="StringValue" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Deporte1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Descripcion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="participante_deporte_rutina" nillable="true" type="tns:ArrayOfparticipante_deporte_rutina" />
+      <xs:element minOccurs="0" name="rutinas_deportes" nillable="true" type="tns:ArrayOfrutinas_deportes" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="CompositeType" nillable="true" type="tns:CompositeType" />
+  <xs:element name="deporte" nillable="true" type="tns:deporte" />
+  <xs:complexType name="ArrayOfparticipante_deporte_rutina">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="participante_deporte_rutina" nillable="true" type="tns:participante_deporte_rutina" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfparticipante_deporte_rutina" nillable="true" type="tns:ArrayOfparticipante_deporte_rutina" />
+  <xs:complexType name="participante_deporte_rutina">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="deporte" nillable="true" type="tns:deporte" />
+      <xs:element minOccurs="0" name="deporte_id" type="xs:int" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="participante" nillable="true" type="tns:participante" />
+      <xs:element minOccurs="0" name="participante_id" type="xs:int" />
+      <xs:element minOccurs="0" name="rutina" nillable="true" type="tns:rutina" />
+      <xs:element minOccurs="0" name="rutina_id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="participante_deporte_rutina" nillable="true" type="tns:participante_deporte_rutina" />
+  <xs:complexType name="participante">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Edad" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Fecha_Ingreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Primer_Apellido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Segundo_Apellido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="participante_deporte_rutina" nillable="true" type="tns:ArrayOfparticipante_deporte_rutina" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="participante" nillable="true" type="tns:participante" />
+  <xs:complexType name="rutina">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Rutina1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="participante_deporte_rutina" nillable="true" type="tns:ArrayOfparticipante_deporte_rutina" />
+      <xs:element minOccurs="0" name="rutinas_deportes" nillable="true" type="tns:ArrayOfrutinas_deportes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="rutina" nillable="true" type="tns:rutina" />
+  <xs:complexType name="ArrayOfrutinas_deportes">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="rutinas_deportes" nillable="true" type="tns:rutinas_deportes" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfrutinas_deportes" nillable="true" type="tns:ArrayOfrutinas_deportes" />
+  <xs:complexType name="rutinas_deportes">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="deporte" nillable="true" type="tns:deporte" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+      <xs:element minOccurs="0" name="rutina" nillable="true" type="tns:rutina" />
+      <xs:element minOccurs="0" name="rutina_id" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="sport_id" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="rutinas_deportes" nillable="true" type="tns:rutinas_deportes" />
 </xs:schema>

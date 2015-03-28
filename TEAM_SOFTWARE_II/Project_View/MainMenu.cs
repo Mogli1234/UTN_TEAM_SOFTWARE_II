@@ -16,5 +16,11 @@ namespace Project_View
         {
             InitializeComponent();
         }
+
+        private void btnCreateSport_Click(object sender, EventArgs e)
+        {
+            Create_Sport sport = new Create_Sport();
+            sport.ShowDialog();
+        }
     }
 }

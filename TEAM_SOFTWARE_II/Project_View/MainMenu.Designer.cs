@@ -31,18 +31,18 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.dotNetBarManager1 = new DevComponents.DotNetBar.DotNetBarManager(this.components);
+            this.dockSite4 = new DevComponents.DotNetBar.DockSite();
             this.dockSite1 = new DevComponents.DotNetBar.DockSite();
             this.dockSite2 = new DevComponents.DotNetBar.DockSite();
-            this.dockSite3 = new DevComponents.DotNetBar.DockSite();
-            this.dockSite4 = new DevComponents.DotNetBar.DockSite();
+            this.dockSite8 = new DevComponents.DotNetBar.DockSite();
             this.dockSite5 = new DevComponents.DotNetBar.DockSite();
             this.dockSite6 = new DevComponents.DotNetBar.DockSite();
             this.dockSite7 = new DevComponents.DotNetBar.DockSite();
-            this.dockSite8 = new DevComponents.DotNetBar.DockSite();
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
             this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
             this.btnCreateSport = new DevComponents.DotNetBar.ButtonItem();
+            this.dockSite3 = new DevComponents.DotNetBar.DockSite();
             this.dockSite7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             this.SuspendLayout();
@@ -70,6 +70,17 @@
             this.dotNetBarManager1.ToolbarTopDockSite = this.dockSite7;
             this.dotNetBarManager1.TopDockSite = this.dockSite3;
             // 
+            // dockSite4
+            // 
+            this.dockSite4.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.dockSite4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dockSite4.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
+            this.dockSite4.Location = new System.Drawing.Point(0, 523);
+            this.dockSite4.Name = "dockSite4";
+            this.dockSite4.Size = new System.Drawing.Size(798, 0);
+            this.dockSite4.TabIndex = 3;
+            this.dockSite4.TabStop = false;
+            // 
             // dockSite1
             // 
             this.dockSite1.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
@@ -92,27 +103,15 @@
             this.dockSite2.TabIndex = 1;
             this.dockSite2.TabStop = false;
             // 
-            // dockSite3
+            // dockSite8
             // 
-            this.dockSite3.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.dockSite3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.dockSite3.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite3.Location = new System.Drawing.Point(0, 25);
-            this.dockSite3.Name = "dockSite3";
-            this.dockSite3.Size = new System.Drawing.Size(798, 0);
-            this.dockSite3.TabIndex = 2;
-            this.dockSite3.TabStop = false;
-            // 
-            // dockSite4
-            // 
-            this.dockSite4.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.dockSite4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dockSite4.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
-            this.dockSite4.Location = new System.Drawing.Point(0, 523);
-            this.dockSite4.Name = "dockSite4";
-            this.dockSite4.Size = new System.Drawing.Size(798, 0);
-            this.dockSite4.TabIndex = 3;
-            this.dockSite4.TabStop = false;
+            this.dockSite8.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.dockSite8.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dockSite8.Location = new System.Drawing.Point(0, 523);
+            this.dockSite8.Name = "dockSite8";
+            this.dockSite8.Size = new System.Drawing.Size(798, 0);
+            this.dockSite8.TabIndex = 7;
+            this.dockSite8.TabStop = false;
             // 
             // dockSite5
             // 
@@ -145,20 +144,10 @@
             this.dockSite7.TabIndex = 6;
             this.dockSite7.TabStop = false;
             // 
-            // dockSite8
-            // 
-            this.dockSite8.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
-            this.dockSite8.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dockSite8.Location = new System.Drawing.Point(0, 523);
-            this.dockSite8.Name = "dockSite8";
-            this.dockSite8.Size = new System.Drawing.Size(798, 0);
-            this.dockSite8.TabIndex = 7;
-            this.dockSite8.TabStop = false;
-            // 
             // bar1
             // 
-            this.bar1.AccessibleDescription = "bar1 (bar1)";
-            this.bar1.AccessibleName = "bar1";
+            this.bar1.AccessibleDescription = "DotNetBar Bar (bar1)";
+            this.bar1.AccessibleName = "DotNetBar Bar";
             this.bar1.AccessibleRole = System.Windows.Forms.AccessibleRole.MenuBar;
             this.bar1.DockSide = DevComponents.DotNetBar.eDockSide.Top;
             this.bar1.Font = new System.Drawing.Font("Segoe UI", 9F);
@@ -192,6 +181,18 @@
             // 
             this.btnCreateSport.Name = "btnCreateSport";
             this.btnCreateSport.Text = "Create Sports";
+            this.btnCreateSport.Click += new System.EventHandler(this.btnCreateSport_Click);
+            // 
+            // dockSite3
+            // 
+            this.dockSite3.AccessibleRole = System.Windows.Forms.AccessibleRole.Window;
+            this.dockSite3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dockSite3.DocumentDockContainer = new DevComponents.DotNetBar.DocumentDockContainer();
+            this.dockSite3.Location = new System.Drawing.Point(0, 25);
+            this.dockSite3.Name = "dockSite3";
+            this.dockSite3.Size = new System.Drawing.Size(798, 0);
+            this.dockSite3.TabIndex = 2;
+            this.dockSite3.TabStop = false;
             // 
             // MainMenu
             // 
