@@ -35,12 +35,23 @@ namespace Project_View
             if (client.createSport(sport))
             {
                 MessageBox.Show("Se ha agregado con exito el deporte","SUCESS",MessageBoxButtons.OK,MessageBoxIcon.Exclamation);
+                this.limpiarCampos();
             }
             else
             {
                 MessageBox.Show("Ha ocurrido un error a la hora de crear", "FAIL", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    
+                this.limpiarCampos();    
             }
         }
+
+        #region Metodo de limpiar campos
+        void limpiarCampos()
+        {
+            txtSport.Clear();
+            txtDescription.Clear();
+            txtSport.Focus();
+        }
+        #endregion
+
     }
 }

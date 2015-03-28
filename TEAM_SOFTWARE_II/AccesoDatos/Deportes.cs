@@ -11,12 +11,12 @@ namespace AccesoDatos
    public class Deportes
     {
        UTN_SPORTS_ModelContainer modelo = new UTN_SPORTS_ModelContainer();
-
+       private bool estado = false;
        #region Metodo de insertar deportes
        //Metodo de insertar deportes
        public Boolean crearDeporte(deporte sport)
        {
-           bool estado = false;
+
            try
            {
                if (sport != null)
@@ -36,6 +36,48 @@ namespace AccesoDatos
        }
        #endregion
 
+        #region Metodo de Eliminar los deportes
+       public Boolean DeleteSport(deporte oSport)
+       {
+           try
+           {
+               if (oSport != null)
+               {
+                   modelo.deportes.Remove(oSport);
+                   estado = true;
+               }
+
+           }
+           catch (ModelValidationException e)
+           {
+               throw e;
+           }
+           return estado;
+       }
+       #endregion
+
+        #region Metodo de actualizar
+
+       public Boolean UpdateSport(deporte oSport)
+       {
+           try
+           {
+               if (oSport != null)
+               {
+                   modelo.deportes.Add(oSport);
+                   modelo.SaveChanges();
+                   estado = true;
+               }
+           }
+           catch (Exception e)
+           {
+
+               return estado;
+           }
+           return estado;
+       }
+
+       #endregion
 
     }
 }
