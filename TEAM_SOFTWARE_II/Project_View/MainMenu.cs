@@ -22,5 +22,11 @@ namespace Project_View
             Create_Sport sport = new Create_Sport();
             sport.ShowDialog();
         }
+
+        private void btnCrearRutina_Click(object sender, EventArgs e)
+        {
+            Create_Routine oCreateRoutine= new Create_Routine();
+            oCreateRoutine.ShowDialog();
+        }
     }
 }

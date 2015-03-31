@@ -81,6 +81,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UTN_SPORTS_Model.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Rutinas.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="Modelo\UTN_SPORTS_Model.edmx">

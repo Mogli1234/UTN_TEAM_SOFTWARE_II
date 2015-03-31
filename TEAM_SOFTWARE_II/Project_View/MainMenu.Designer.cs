@@ -40,8 +40,10 @@
             this.dockSite7 = new DevComponents.DotNetBar.DockSite();
             this.bar1 = new DevComponents.DotNetBar.Bar();
             this.buttonItem1 = new DevComponents.DotNetBar.ButtonItem();
-            this.buttonItem2 = new DevComponents.DotNetBar.ButtonItem();
+            this.btniDeporte = new DevComponents.DotNetBar.ButtonItem();
             this.btnCreateSport = new DevComponents.DotNetBar.ButtonItem();
+            this.btniRutina = new DevComponents.DotNetBar.ButtonItem();
+            this.btnCrearRutina = new DevComponents.DotNetBar.ButtonItem();
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
             this.dockSite7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
@@ -167,21 +169,36 @@
             // 
             this.buttonItem1.Name = "buttonItem1";
             this.buttonItem1.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.buttonItem2});
+            this.btniDeporte,
+            this.btniRutina});
             this.buttonItem1.Text = "File";
             // 
-            // buttonItem2
+            // btniDeporte
             // 
-            this.buttonItem2.Name = "buttonItem2";
-            this.buttonItem2.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btniDeporte.Name = "btniDeporte";
+            this.btniDeporte.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
             this.btnCreateSport});
-            this.buttonItem2.Text = "Deporte";
+            this.btniDeporte.Text = "Deporte";
             // 
             // btnCreateSport
             // 
             this.btnCreateSport.Name = "btnCreateSport";
             this.btnCreateSport.Text = "Create Sports";
             this.btnCreateSport.Click += new System.EventHandler(this.btnCreateSport_Click);
+            // 
+            // btniRutina
+            // 
+            this.btniRutina.Name = "btniRutina";
+            this.btniRutina.PopupAnimation = DevComponents.DotNetBar.ePopupAnimation.Fade;
+            this.btniRutina.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
+            this.btnCrearRutina});
+            this.btniRutina.Text = "Rutina";
+            // 
+            // btnCrearRutina
+            // 
+            this.btnCrearRutina.Name = "btnCrearRutina";
+            this.btnCrearRutina.Text = "Create Routine";
+            this.btnCrearRutina.Click += new System.EventHandler(this.btnCrearRutina_Click);
             // 
             // dockSite3
             // 
@@ -229,8 +246,10 @@
         private DevComponents.DotNetBar.DockSite dockSite7;
         private DevComponents.DotNetBar.Bar bar1;
         private DevComponents.DotNetBar.ButtonItem buttonItem1;
-        private DevComponents.DotNetBar.ButtonItem buttonItem2;
+        private DevComponents.DotNetBar.ButtonItem btniDeporte;
         private DevComponents.DotNetBar.ButtonItem btnCreateSport;
         private DevComponents.DotNetBar.DockSite dockSite8;
+        private DevComponents.DotNetBar.ButtonItem btniRutina;
+        private DevComponents.DotNetBar.ButtonItem btnCrearRutina;
     }
 }

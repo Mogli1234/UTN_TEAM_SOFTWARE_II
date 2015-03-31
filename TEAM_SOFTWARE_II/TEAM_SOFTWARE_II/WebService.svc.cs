@@ -20,8 +20,6 @@ namespace TEAM_SOFTWARE_II
             return string.Format("You entered: {0}", value);
         }
 
-
-
         public bool createSport(deporte sport)
         {
             return deportes.crearDeporte(sport);

@@ -12,11 +12,11 @@ namespace AccesoDatos
     {
        UTN_SPORTS_ModelContainer modelo = new UTN_SPORTS_ModelContainer();
        private bool estado = false;
+
        #region Metodo de insertar deportes
        //Metodo de insertar deportes
        public Boolean crearDeporte(deporte sport)
        {
-
            try
            {
                if (sport != null)
@@ -28,10 +28,8 @@ namespace AccesoDatos
            }
            catch (ModelValidationException e)
            {
-                
                throw e;
            }
-           
            return estado;
        }
        #endregion

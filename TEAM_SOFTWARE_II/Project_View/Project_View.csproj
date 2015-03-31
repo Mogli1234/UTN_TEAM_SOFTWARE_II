@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Create_Routine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create_Routine.Designer.cs">
+      <DependentUpon>Create_Routine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Create_Sport.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Create_Routine.resx">
+      <DependentUpon>Create_Routine.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Create_Sport.resx">
       <DependentUpon>Create_Sport.cs</DependentUpon>
     </EmbeddedResource>
