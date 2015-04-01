@@ -47,82 +47,88 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AboutUs.cs">
+    <Compile Include="Principal Forms\AboutUs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AboutUs.Designer.cs">
+    <Compile Include="Principal Forms\AboutUs.Designer.cs">
       <DependentUpon>AboutUs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Create_Routine.cs">
+    <Compile Include="Routine Maintence\frm_EditarRutinas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Create_Routine.Designer.cs">
+    <Compile Include="Routine Maintence\frm_EditarRutinas.designer.cs">
+      <DependentUpon>frm_EditarRutinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Routine Maintence\Create_Routine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Routine Maintence\Create_Routine.Designer.cs">
       <DependentUpon>Create_Routine.cs</DependentUpon>
     </Compile>
-    <Compile Include="Create_Sport.cs">
+    <Compile Include="Sports Maintence\Create_Sport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Create_Sport.Designer.cs">
+    <Compile Include="Sports Maintence\Create_Sport.Designer.cs">
       <DependentUpon>Create_Sport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Create_User.cs">
+    <Compile Include="Principal Forms\Create_User.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Create_User.designer.cs">
+    <Compile Include="Principal Forms\Create_User.designer.cs">
       <DependentUpon>Create_User.cs</DependentUpon>
     </Compile>
-    <Compile Include="Edit_Sport.cs">
+    <Compile Include="Sports Maintence\Edit_Sport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Edit_Sport.designer.cs">
+    <Compile Include="Sports Maintence\Edit_Sport.designer.cs">
       <DependentUpon>Edit_Sport.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_assignar_sport.cs">
+    <Compile Include="Assigned Forms\frm_assignar_sport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_assignar_sport.designer.cs">
+    <Compile Include="Assigned Forms\frm_assignar_sport.designer.cs">
       <DependentUpon>frm_assignar_sport.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_AssingRutina.cs">
+    <Compile Include="Assigned Forms\frm_AssingRutina.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_AssingRutina.designer.cs">
+    <Compile Include="Assigned Forms\frm_AssingRutina.designer.cs">
       <DependentUpon>frm_AssingRutina.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_Login.cs">
+    <Compile Include="Principal Forms\frm_Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_Login.designer.cs">
+    <Compile Include="Principal Forms\frm_Login.designer.cs">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_PArticipante.cs">
+    <Compile Include="Participantes Maintence\frm_PArticipante.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_PArticipante.designer.cs">
+    <Compile Include="Participantes Maintence\frm_PArticipante.designer.cs">
       <DependentUpon>frm_PArticipante.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_VerRutinas.cs">
+    <Compile Include="Routine Maintence\frm_VerRutinas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_VerRutinas.designer.cs">
+    <Compile Include="Routine Maintence\frm_VerRutinas.designer.cs">
       <DependentUpon>frm_VerRutinas.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_ViewParticipante.cs">
+    <Compile Include="Participantes Maintence\frm_ViewParticipante.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_ViewParticipante.designer.cs">
+    <Compile Include="Participantes Maintence\frm_ViewParticipante.designer.cs">
       <DependentUpon>frm_ViewParticipante.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_ViewSport.cs">
+    <Compile Include="Sports Maintence\frm_ViewSport.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_ViewSport.designer.cs">
+    <Compile Include="Sports Maintence\frm_ViewSport.designer.cs">
       <DependentUpon>frm_ViewSport.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainMenu.cs">
+    <Compile Include="Principal Forms\MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainMenu.Designer.cs">
+    <Compile Include="Principal Forms\MainMenu.Designer.cs">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -137,43 +143,46 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AboutUs.resx">
+    <EmbeddedResource Include="Principal Forms\AboutUs.resx">
       <DependentUpon>AboutUs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Create_Routine.resx">
+    <EmbeddedResource Include="Routine Maintence\frm_EditarRutinas.resx">
+      <DependentUpon>frm_EditarRutinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Routine Maintence\Create_Routine.resx">
       <DependentUpon>Create_Routine.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Create_Sport.resx">
+    <EmbeddedResource Include="Sports Maintence\Create_Sport.resx">
       <DependentUpon>Create_Sport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Create_User.resx">
+    <EmbeddedResource Include="Principal Forms\Create_User.resx">
       <DependentUpon>Create_User.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Edit_Sport.resx">
+    <EmbeddedResource Include="Sports Maintence\Edit_Sport.resx">
       <DependentUpon>Edit_Sport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_assignar_sport.resx">
+    <EmbeddedResource Include="Assigned Forms\frm_assignar_sport.resx">
       <DependentUpon>frm_assignar_sport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_AssingRutina.resx">
+    <EmbeddedResource Include="Assigned Forms\frm_AssingRutina.resx">
       <DependentUpon>frm_AssingRutina.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Login.resx">
+    <EmbeddedResource Include="Principal Forms\frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_PArticipante.resx">
+    <EmbeddedResource Include="Participantes Maintence\frm_PArticipante.resx">
       <DependentUpon>frm_PArticipante.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_VerRutinas.resx">
+    <EmbeddedResource Include="Routine Maintence\frm_VerRutinas.resx">
       <DependentUpon>frm_VerRutinas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_ViewParticipante.resx">
+    <EmbeddedResource Include="Participantes Maintence\frm_ViewParticipante.resx">
       <DependentUpon>frm_ViewParticipante.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_ViewSport.resx">
+    <EmbeddedResource Include="Sports Maintence\frm_ViewSport.resx">
       <DependentUpon>frm_ViewSport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainMenu.resx">
+    <EmbeddedResource Include="Principal Forms\MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
