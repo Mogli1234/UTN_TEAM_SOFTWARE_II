@@ -14,12 +14,12 @@ namespace Project_View
         public AboutUs()
         {
             InitializeComponent();
-            this.Text = String.Format("Acerca de {0}", AssemblyTitle);
-            this.labelProductName.Text = AssemblyProduct;
+            this.Text = String.Format("Acerca de {0}", "Sports Activity");
+            this.labelProductName.Text = "Sports Activity";
             this.labelVersion.Text = String.Format("Versión {0}", AssemblyVersion);
-            this.labelCopyright.Text = AssemblyCopyright;
-            this.labelCompanyName.Text = AssemblyCompany;
-            this.textBoxDescription.Text = AssemblyDescription;
+            this.labelCopyright.Text = "Copyright 2012, UTN TEAM SOFTWARE";
+            this.labelCompanyName.Text = "UTN TEAM SOFTWARE";
+            this.textBoxDescription.Text = "Esta aplicacion es para tener un control de los deportes de la Zona";
         }
 
         #region Descriptores de acceso de atributos de ensamblado

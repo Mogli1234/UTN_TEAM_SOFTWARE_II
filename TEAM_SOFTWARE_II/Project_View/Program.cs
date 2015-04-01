@@ -16,7 +16,7 @@ namespace Project_View
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainMenu());
+            Application.Run(new Main_Menu());
         }
     }
 }
