@@ -12,17 +12,17 @@ using AccesoDatos.Modelo;
 namespace TEAM_SOFTWARE_II
 {
     [ServiceContract]
-    public interface ITEAM_SOFTWARErutina
+    public interface IRutinas
     {
 
-        [OperationContract]
-        string GetData(int value);
+        //[OperationContract]
+        //string GetData(int value);
 
         // TODO: agregue aquí sus operaciones de servicio
         [OperationContract]
-        Boolean CrearRutina(Rutinas oRutinas);
+        Boolean CrearRutina(rutina Rutinas);
 
         [OperationContract]
-        Boolean EditarRutina(Rutinas oRutinas);
+        Boolean EditarRutina(rutina oRutinas);
     }
 }

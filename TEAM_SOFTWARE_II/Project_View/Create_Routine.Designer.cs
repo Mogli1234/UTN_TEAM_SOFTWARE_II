@@ -54,7 +54,7 @@
             // 
             this.txtRutina.Border.Class = "TextBoxBorder";
             this.txtRutina.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtRutina.Location = new System.Drawing.Point(12, 103);
+            this.txtRutina.Location = new System.Drawing.Point(12, 91);
             this.txtRutina.Multiline = true;
             this.txtRutina.Name = "txtRutina";
             this.txtRutina.Size = new System.Drawing.Size(383, 123);
@@ -71,6 +71,7 @@
             this.btnCancelar.Size = new System.Drawing.Size(67, 68);
             this.btnCancelar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnCancelar.TabIndex = 2;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblRutina
             // 
@@ -89,6 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(594, 299);
             this.Controls.Add(this.lblRutina);
             this.Controls.Add(this.btnCancelar);
@@ -96,7 +98,7 @@
             this.Controls.Add(this.bntGuardar);
             this.Name = "Create_Routine";
             this.Text = "Creacion de Rutinas";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Create_Routine_FormClosed);
+            this.Load += new System.EventHandler(this.Create_Routine_Load);
             this.ResumeLayout(false);
 
         }

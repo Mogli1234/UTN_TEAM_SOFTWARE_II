@@ -45,6 +45,7 @@
             this.btniRutina = new DevComponents.DotNetBar.ButtonItem();
             this.btnCrearRutina = new DevComponents.DotNetBar.ButtonItem();
             this.dockSite3 = new DevComponents.DotNetBar.DockSite();
+            this.btnViewRutines = new DevComponents.DotNetBar.ButtonItem();
             this.dockSite7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bar1)).BeginInit();
             this.SuspendLayout();
@@ -191,7 +192,8 @@
             this.btniRutina.Name = "btniRutina";
             this.btniRutina.PopupAnimation = DevComponents.DotNetBar.ePopupAnimation.Fade;
             this.btniRutina.SubItems.AddRange(new DevComponents.DotNetBar.BaseItem[] {
-            this.btnCrearRutina});
+            this.btnCrearRutina,
+            this.btnViewRutines});
             this.btniRutina.Text = "Rutina";
             // 
             // btnCrearRutina
@@ -210,6 +212,11 @@
             this.dockSite3.Size = new System.Drawing.Size(798, 0);
             this.dockSite3.TabIndex = 2;
             this.dockSite3.TabStop = false;
+            // 
+            // btnViewRutines
+            // 
+            this.btnViewRutines.Name = "btnViewRutines";
+            this.btnViewRutines.Text = "See Routine";
             // 
             // MainMenu
             // 
@@ -251,5 +258,6 @@
         private DevComponents.DotNetBar.DockSite dockSite8;
         private DevComponents.DotNetBar.ButtonItem btniRutina;
         private DevComponents.DotNetBar.ButtonItem btnCrearRutina;
+        private DevComponents.DotNetBar.ButtonItem btnViewRutines;
     }
 }

@@ -15,36 +15,27 @@ namespace Project_View
 {
     public partial class Create_Routine : Form
     {
-        Servicios.TEAM_SOFTWAREClient oClient;
-        rutina oRutina;
+        ServicioRutina.RutinasClient oClient = new ServicioRutina.RutinasClient();
+        rutina oRutina = new rutina();
         public Create_Routine()
         {
             InitializeComponent();
-            oClient = new TEAM_SOFTWAREClient();
-            oRutina = new rutina();
-        }
-
-        private void Create_Routine_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            MainMenu oMainMenu = new MainMenu();
-            oMainMenu.Focus();
-            this.Close();
-
         }
 
         private void bntGuardar_Click(object sender, EventArgs e)
         {
-            oRutina.Rutina1= txtRutina.Text;
-            if (txtRutina.Text!=null)
+            oRutina.Rutina1 = txtRutina.Text;
+            if (oClient.CrearRutina(oRutina))
             {
-                MessageBox.Show("Se ha agregado con exito el deporte", "SUCESS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Se ha agregado con exito la rutina", "SUCESS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 this.Limpiar();
             }
             else
             {
-                MessageBox.Show("Ha ocurrido un error a la hora de crear", "FAIL", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un error a la hora de agregar la rutina", "FAIL", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 this.Limpiar();
             }
+
         }
 
         public void Limpiar()
@@ -52,5 +43,17 @@ namespace Project_View
             this.txtRutina.Clear();
             this.txtRutina.Focus();
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Create_Routine_Load(object sender, EventArgs e)
+        {
+
+        }
+
+      
     }
 }

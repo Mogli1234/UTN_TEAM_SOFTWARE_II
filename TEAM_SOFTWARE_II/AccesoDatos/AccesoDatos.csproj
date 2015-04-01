@@ -46,7 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Deportes.cs" />
+    <Compile Include="Datos\Deportes.cs" />
     <Compile Include="Modelo\deporte.cs">
       <DependentUpon>UTN_SPORTS_Model.tt</DependentUpon>
     </Compile>
@@ -81,7 +81,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>UTN_SPORTS_Model.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Rutinas.cs" />
+    <Compile Include="Datos\Rutinas.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="Modelo\UTN_SPORTS_Model.edmx">

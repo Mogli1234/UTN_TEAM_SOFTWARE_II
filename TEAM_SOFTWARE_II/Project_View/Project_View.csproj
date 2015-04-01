@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutUs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutUs.Designer.cs">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Create_Routine.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -59,6 +65,60 @@
     <Compile Include="Create_Sport.Designer.cs">
       <DependentUpon>Create_Sport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Create_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create_User.designer.cs">
+      <DependentUpon>Create_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Sport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Sport.designer.cs">
+      <DependentUpon>Edit_Sport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_assignar_sport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_assignar_sport.designer.cs">
+      <DependentUpon>frm_assignar_sport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_AssingRutina.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_AssingRutina.designer.cs">
+      <DependentUpon>frm_AssingRutina.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Login.designer.cs">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_PArticipante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_PArticipante.designer.cs">
+      <DependentUpon>frm_PArticipante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_VerRutinas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_VerRutinas.designer.cs">
+      <DependentUpon>frm_VerRutinas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ViewParticipante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ViewParticipante.designer.cs">
+      <DependentUpon>frm_ViewParticipante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_ViewSport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_ViewSport.designer.cs">
+      <DependentUpon>frm_ViewSport.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,16 +127,51 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service References\ServicioRutina\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\Servicios\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AboutUs.resx">
+      <DependentUpon>AboutUs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Create_Routine.resx">
       <DependentUpon>Create_Routine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Create_Sport.resx">
       <DependentUpon>Create_Sport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Create_User.resx">
+      <DependentUpon>Create_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Edit_Sport.resx">
+      <DependentUpon>Edit_Sport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_assignar_sport.resx">
+      <DependentUpon>frm_assignar_sport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_AssingRutina.resx">
+      <DependentUpon>frm_AssingRutina.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Login.resx">
+      <DependentUpon>frm_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_PArticipante.resx">
+      <DependentUpon>frm_PArticipante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_VerRutinas.resx">
+      <DependentUpon>frm_VerRutinas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ViewParticipante.resx">
+      <DependentUpon>frm_ViewParticipante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_ViewSport.resx">
+      <DependentUpon>frm_ViewSport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>
@@ -100,6 +195,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Service References\ServicioRutina\RutinasWebService.wsdl" />
+    <None Include="Service References\ServicioRutina\RutinasWebService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioRutina\RutinasWebService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioRutina\RutinasWebService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\Servicios\Service1.wsdl" />
     <None Include="Service References\Servicios\WebService.xsd">
       <SubType>Designer</SubType>
@@ -118,6 +223,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServicioRutina\" />
     <WCFMetadataStorage Include="Service References\Servicios\" />
   </ItemGroup>
   <ItemGroup>
@@ -164,6 +270,21 @@
       <Project>{f092382d-189b-4fcb-96b6-7a22937d9452}</Project>
       <Name>AccesoDatos</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioRutina\RutinasWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioRutina\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioRutina\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioRutina\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
