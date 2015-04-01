@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Project_View.Servicios {
+namespace Project_View.Servicio {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="Servicios.ITEAM_SOFTWARE")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="Servicio.ITEAM_SOFTWARE")]
     public interface ITEAM_SOFTWARE {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITEAM_SOFTWARE/GetData", ReplyAction="http://tempuri.org/ITEAM_SOFTWARE/GetDataResponse")]
@@ -29,12 +29,12 @@ namespace Project_View.Servicios {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface ITEAM_SOFTWAREChannel : Project_View.Servicios.ITEAM_SOFTWARE, System.ServiceModel.IClientChannel {
+    public interface ITEAM_SOFTWAREChannel : Project_View.Servicio.ITEAM_SOFTWARE, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class TEAM_SOFTWAREClient : System.ServiceModel.ClientBase<Project_View.Servicios.ITEAM_SOFTWARE>, Project_View.Servicios.ITEAM_SOFTWARE {
+    public partial class TEAM_SOFTWAREClient : System.ServiceModel.ClientBase<Project_View.Servicio.ITEAM_SOFTWARE>, Project_View.Servicio.ITEAM_SOFTWARE {
         
         public TEAM_SOFTWAREClient() {
         }

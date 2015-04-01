@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
@@ -12,8 +13,9 @@ namespace AccesoDatos
     {
        UTN_SPORTS_ModelContainer modelo = new UTN_SPORTS_ModelContainer();
        private bool estado = false;
+       
 
-       #region Metodo de insertar deportes
+        #region Metodo de insertar deportes
        //Metodo de insertar deportes
        public Boolean crearDeporte(deporte sport)
        {
@@ -77,5 +79,17 @@ namespace AccesoDatos
 
        #endregion
 
+       public List<Modelo.deporte> Charge_Sports()
+       {
+           List<deporte> sportsList = new List<deporte>();
+           var queryAllSports = from sport in modelo.deportes
+                                select sport;
+           foreach (var datos in queryAllSports)
+           {
+               sportsList.Add(datos);
+           }
+           return sportsList;
+
+       }
     }
 }
