@@ -24,6 +24,8 @@ namespace TEAM_SOFTWARE_II
 
         [OperationContract] 
         List<deporte>ChargeSportsList();
+
+        
     }
     
 }

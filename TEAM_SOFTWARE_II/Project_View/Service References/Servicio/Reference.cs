@@ -26,6 +26,12 @@ namespace Project_View.Servicio {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITEAM_SOFTWARE/createSport", ReplyAction="http://tempuri.org/ITEAM_SOFTWARE/createSportResponse")]
         System.Threading.Tasks.Task<bool> createSportAsync(AccesoDatos.Modelo.deporte sport);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITEAM_SOFTWARE/ChargeSportsList", ReplyAction="http://tempuri.org/ITEAM_SOFTWARE/ChargeSportsListResponse")]
+        AccesoDatos.Modelo.deporte[] ChargeSportsList();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/ITEAM_SOFTWARE/ChargeSportsList", ReplyAction="http://tempuri.org/ITEAM_SOFTWARE/ChargeSportsListResponse")]
+        System.Threading.Tasks.Task<AccesoDatos.Modelo.deporte[]> ChargeSportsListAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -69,6 +75,14 @@ namespace Project_View.Servicio {
         
         public System.Threading.Tasks.Task<bool> createSportAsync(AccesoDatos.Modelo.deporte sport) {
             return base.Channel.createSportAsync(sport);
+        }
+        
+        public AccesoDatos.Modelo.deporte[] ChargeSportsList() {
+            return base.Channel.ChargeSportsList();
+        }
+        
+        public System.Threading.Tasks.Task<AccesoDatos.Modelo.deporte[]> ChargeSportsListAsync() {
+            return base.Channel.ChargeSportsListAsync();
         }
     }
 }

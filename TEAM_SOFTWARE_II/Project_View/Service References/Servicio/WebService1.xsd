@@ -65,4 +65,10 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="rutinas_deportes" nillable="true" type="tns:rutinas_deportes" />
+  <xs:complexType name="ArrayOfdeporte">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="deporte" nillable="true" type="tns:deporte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfdeporte" nillable="true" type="tns:ArrayOfdeporte" />
 </xs:schema>

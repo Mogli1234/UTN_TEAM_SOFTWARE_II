@@ -25,10 +25,11 @@ namespace TEAM_SOFTWARE_II
             return deportes.crearDeporte(sport);
         }
 
-
         public List<deporte>ChargeSportsList()
         {
             return deportes.Charge_Sports();
         }
+
+        
     }
 }

@@ -19,6 +19,12 @@
   <wsdl:message name="ITEAM_SOFTWARE_createSport_OutputMessage">
     <wsdl:part name="parameters" element="tns:createSportResponse" />
   </wsdl:message>
+  <wsdl:message name="ITEAM_SOFTWARE_ChargeSportsList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ChargeSportsList" />
+  </wsdl:message>
+  <wsdl:message name="ITEAM_SOFTWARE_ChargeSportsList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ChargeSportsListResponse" />
+  </wsdl:message>
   <wsdl:portType name="ITEAM_SOFTWARE">
     <wsdl:operation name="GetData">
       <wsdl:input wsaw:Action="http://tempuri.org/ITEAM_SOFTWARE/GetData" message="tns:ITEAM_SOFTWARE_GetData_InputMessage" />
@@ -27,6 +33,10 @@
     <wsdl:operation name="createSport">
       <wsdl:input wsaw:Action="http://tempuri.org/ITEAM_SOFTWARE/createSport" message="tns:ITEAM_SOFTWARE_createSport_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/ITEAM_SOFTWARE/createSportResponse" message="tns:ITEAM_SOFTWARE_createSport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ChargeSportsList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ITEAM_SOFTWARE/ChargeSportsList" message="tns:ITEAM_SOFTWARE_ChargeSportsList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ITEAM_SOFTWARE/ChargeSportsListResponse" message="tns:ITEAM_SOFTWARE_ChargeSportsList_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_ITEAM_SOFTWARE" type="tns:ITEAM_SOFTWARE">
@@ -42,6 +52,15 @@
     </wsdl:operation>
     <wsdl:operation name="createSport">
       <soap:operation soapAction="http://tempuri.org/ITEAM_SOFTWARE/createSport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ChargeSportsList">
+      <soap:operation soapAction="http://tempuri.org/ITEAM_SOFTWARE/ChargeSportsList" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

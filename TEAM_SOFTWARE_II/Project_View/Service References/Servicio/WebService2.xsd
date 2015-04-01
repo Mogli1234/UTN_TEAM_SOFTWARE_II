@@ -29,4 +29,16 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="ChargeSportsList">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ChargeSportsListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/AccesoDatos.Modelo" minOccurs="0" name="ChargeSportsListResult" nillable="true" type="q2:ArrayOfdeporte" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
 </xs:schema>
