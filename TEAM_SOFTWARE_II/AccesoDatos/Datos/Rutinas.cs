@@ -29,7 +29,6 @@ namespace AccesoDatos
             catch (Exception e)
             {
                 throw e;
-                return estado;
             }
             return estado;
         }
@@ -47,7 +46,6 @@ namespace AccesoDatos
             catch (Exception e)
             {
                 throw e;
-                return estado;
             }
             return estado;
         }
@@ -66,7 +64,6 @@ namespace AccesoDatos
             {
 
                 throw error;
-                return estado;
             }
             return estado;
         }
