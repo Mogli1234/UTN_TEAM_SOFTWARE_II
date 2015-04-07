@@ -59,7 +59,6 @@ namespace AccesoDatos.Datos
         #endregion
 
        #region Eliminar participantes
-
        public Boolean EliminarParticipante(participante oParticipante)
        {
            try
@@ -81,36 +80,19 @@ namespace AccesoDatos.Datos
        }
        #endregion
 
-       #region Cargar tabla participantes
-       public List<deporte> Charge_Sports()
-       {
-           List<deporte> sportsList = new List<deporte>();
-           var queryAllSports = from sport in modelo.deportes
-                                select sport;
-
-           foreach (var datos in queryAllSports.ToArray())
-           {
-               sportsList.Add(datos);
-           }
-           return sportsList;
-
-       }
-       #endregion
-
-       public Boolean ConsultaParticipante(participante oParticipante)
+       /*
+       #region Cargar participantes....
+       public Boolean ConsultaParticipantes(participante oParticipante)
        {
            var query = from oParticipante in oModelContainer.participantes
                        where oParticipante.id = oModelContainer.participantes.Select(oParticipante);
                        select oParticipante;
-           IEnumerable<Product> products = query.ToList();
+           estado = true;
+           IEnumerable<participante> participantes = query.ToList();
+           return estado;
        }
-
-
-       NorthwindEntities dbContext = new NorthwindEntities();
-       var query = from p in dbContext.ProductSet
-                   where p.Categories.CategoryName == "Seafood"
-                   select p;
-       IEnumerable<Product> products = query.ToList();
+       #endregion 
+       */
 
     }
 }

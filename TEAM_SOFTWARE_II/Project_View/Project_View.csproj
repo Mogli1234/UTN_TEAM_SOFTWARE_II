@@ -71,6 +71,7 @@
     <Compile Include="Routine Maintence\Create_Routine.Designer.cs">
       <DependentUpon>Create_Routine.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Service References\ServicioParticipante\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -82,6 +83,9 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Service References\Servicio\Reference.cs">
+=======
+    <Compile Include="Service References\ServicioDeporte\Reference.cs">
+>>>>>>> 53c40dcd6574651435bac3611e198bf10a28dc6f
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -215,32 +219,42 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+<<<<<<< HEAD
     <None Include="Service References\ServicioParticipante\ParticipanteWebService.wsdl" />
     <None Include="Service References\ServicioParticipante\ParticipanteWebService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServicioRutina\RutinasWebService.wsdl" />
     <None Include="Service References\ServicioRutina\RutinasWebService.xsd">
+=======
+    <None Include="Service References\ServicioDeporte\WebService.wsdl" />
+    <None Include="Service References\ServicioDeporte\WebService.xsd">
+>>>>>>> 53c40dcd6574651435bac3611e198bf10a28dc6f
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServicioRutina\RutinasWebService1.xsd">
+    <None Include="Service References\ServicioDeporte\WebService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServicioRutina\RutinasWebService2.xsd">
+    <None Include="Service References\ServicioDeporte\WebService2.xsd">
       <SubType>Designer</SubType>
     </None>
+<<<<<<< HEAD
     <None Include="Service References\ServicioUsuario\UsuarioWebService.wsdl" />
     <None Include="Service References\ServicioUsuario\UsuarioWebService.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\Servicio\WebService.wsdl" />
     <None Include="Service References\Servicio\WebService.xsd">
+=======
+    <None Include="Service References\ServicioRutina\RutinasWebService.wsdl" />
+    <None Include="Service References\ServicioRutina\RutinasWebService.xsd">
+>>>>>>> 53c40dcd6574651435bac3611e198bf10a28dc6f
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Servicio\WebService1.xsd">
+    <None Include="Service References\ServicioRutina\RutinasWebService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\Servicio\WebService2.xsd">
+    <None Include="Service References\ServicioRutina\RutinasWebService2.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -251,10 +265,15 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <WCFMetadataStorage Include="Service References\ServicioParticipante\" />
     <WCFMetadataStorage Include="Service References\ServicioRutina\" />
     <WCFMetadataStorage Include="Service References\ServicioUsuario\" />
     <WCFMetadataStorage Include="Service References\Servicio\" />
+=======
+    <WCFMetadataStorage Include="Service References\ServicioDeporte\" />
+    <WCFMetadataStorage Include="Service References\ServicioRutina\" />
+>>>>>>> 53c40dcd6574651435bac3611e198bf10a28dc6f
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1395628239_save.png" />
@@ -302,16 +321,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\Servicio\WebService.disco" />
+    <None Include="Service References\ServicioDeporte\WebService.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\Servicio\configuration91.svcinfo" />
+    <None Include="Service References\ServicioDeporte\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\Servicio\configuration.svcinfo" />
+    <None Include="Service References\ServicioDeporte\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\Servicio\Reference.svcmap">
+    <None Include="Service References\ServicioDeporte\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
