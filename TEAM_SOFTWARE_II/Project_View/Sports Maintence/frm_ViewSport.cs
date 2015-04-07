@@ -24,9 +24,12 @@ namespace Project_View
         private void frm_ViewSport_Load(object sender, EventArgs e)
         {
            dtg_sport.DataSource = client.ChargeSportsList();
-            dtg_sport.Columns[2].Visible =false;
-            dtg_sport.Columns[1].HeaderText = "Descripción";
-            dtg_sport.Columns[0].HeaderText = "Deporte";
+            dtg_sport.Columns[0].Visible =false;
+            dtg_sport.Columns[3].Visible = false;
+            dtg_sport.Columns[4].Visible = false;
+            dtg_sport.Columns[2].HeaderText = "Descripción";
+            dtg_sport.Columns[1].HeaderText = "Deporte";
+
         }
 
         private void btn_Cancelar_Click(object sender, EventArgs e)

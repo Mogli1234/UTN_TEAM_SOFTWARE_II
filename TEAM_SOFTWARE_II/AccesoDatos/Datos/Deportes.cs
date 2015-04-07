@@ -85,12 +85,11 @@ namespace AccesoDatos
            var queryAllSports = from sport in modelo.deportes
                                 select sport;
 
-           foreach (var datos in queryAllSports.ToArray())
+           foreach (var data in queryAllSports.ToList())
            {
-               sportsList.Add(datos);
+               sportsList.Add(data);
            }
            return sportsList;
-
        }
     }
 }
