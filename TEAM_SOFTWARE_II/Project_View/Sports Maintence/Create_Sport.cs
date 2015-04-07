@@ -8,7 +8,7 @@ using System.ServiceModel.Configuration;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Project_View.Servicio;
+using Project_View.ServicioDeporte;
 using AccesoDatos.Modelo;
 
 
@@ -16,7 +16,7 @@ namespace Project_View
 {
     public partial class Create_Sport : Form
     {
-        Servicio.TEAM_SOFTWAREClient client = new Servicio.TEAM_SOFTWAREClient();
+        ServicioDeporte.TEAM_SOFTWAREClient client = new ServicioDeporte.TEAM_SOFTWAREClient();
         deporte sport = new deporte();
         public Create_Sport()
         {
