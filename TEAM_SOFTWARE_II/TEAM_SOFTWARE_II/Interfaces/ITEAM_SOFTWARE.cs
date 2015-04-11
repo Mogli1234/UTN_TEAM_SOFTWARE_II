@@ -23,7 +23,7 @@ namespace TEAM_SOFTWARE_II
         Boolean createSport(deporte sport);
 
         [OperationContract]
-        List<deporte> ChargeSportsList();
+        List<Sport> ChargeSportsList();
 
         
     }

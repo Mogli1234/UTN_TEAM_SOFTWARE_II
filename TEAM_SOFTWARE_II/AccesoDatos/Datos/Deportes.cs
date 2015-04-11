@@ -79,15 +79,20 @@ namespace AccesoDatos
 
        #endregion
 
-       public List<deporte> Charge_Sports()
+       public List<Sport> Charge_Sports()
        {
-           List<deporte>sportsList = new List<deporte>();
+           List<Sport> sportsList = new List<Sport>();
            var queryAllSports = from sport in modelo.deportes
                                 select sport;
 
            foreach (var data in queryAllSports.ToList())
            {
-               sportsList.Add(data);
+               sportsList.Add(new Sport()
+               {
+                   id = data.id,
+                   deporte = data.Deporte1,
+                   description = data.Descripcion
+               });
            }
            return sportsList;
        }

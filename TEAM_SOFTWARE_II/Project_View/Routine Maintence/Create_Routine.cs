@@ -27,6 +27,7 @@ namespace Project_View
             oRutina.Rutina1 = txtRutina.Text;
             if (oClient.CrearRutina(oRutina))
             {
+
                 MessageBox.Show("Se ha agregado con exito la rutina", "SUCESS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 this.Limpiar();
             }
