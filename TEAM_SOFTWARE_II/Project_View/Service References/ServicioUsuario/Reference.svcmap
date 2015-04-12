@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="52e759ab-3b50-4f6d-b15a-7cdb88d0c693" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:7215/UsuariosWebService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="UsuariosWebService.xsd" MetadataType="Schema" ID="68d505fb-f11d-4dca-974b-3c5ee59e0c4e" SourceId="1" SourceUrl="http://localhost:7215/UsuariosWebService.svc?xsd=xsd0" />
+    <MetadataFile FileName="UsuariosWebService.disco" MetadataType="Disco" ID="e6b8c605-fa72-4670-80ec-1ebc5098c3ca" SourceId="1" SourceUrl="http://localhost:7215/UsuariosWebService.svc?disco" />
+    <MetadataFile FileName="UsuariosWebService.wsdl" MetadataType="Wsdl" ID="3a6b1fa1-e851-4585-ab60-b7c625c921b4" SourceId="1" SourceUrl="http://localhost:7215/UsuariosWebService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

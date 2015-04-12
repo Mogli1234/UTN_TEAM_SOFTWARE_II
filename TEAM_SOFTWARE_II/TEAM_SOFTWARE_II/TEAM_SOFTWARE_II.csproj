@@ -65,24 +65,33 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ParticipantesWebService.svc" />
     <Content Include="RutinasWebService.svc" />
-    <Content Include="WebService.svc" />
+    <Content Include="UsuariosWebService.svc" />
+    <Content Include="DeportesWebService.svc" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Interfaces\IRutinas.cs" />
+    <Compile Include="Interfaces\IUsuariosWebService.cs" />
+    <Compile Include="Interfaces\IParticipantesWebService.cs" />
+    <Compile Include="ParticipantesWebService.svc.cs">
+      <DependentUpon>ParticipantesWebService.svc</DependentUpon>
+    </Compile>
     <Compile Include="RutinasWebService.svc.cs">
       <DependentUpon>RutinasWebService.svc</DependentUpon>
     </Compile>
-    <Compile Include="WebService.svc.cs">
-      <DependentUpon>WebService.svc</DependentUpon>
+    <Compile Include="UsuariosWebService.svc.cs">
+      <DependentUpon>UsuariosWebService.svc</DependentUpon>
     </Compile>
-    <Compile Include="Interfaces\ITEAM_SOFTWARE.cs" />
+    <Compile Include="DeportesWebService.svc.cs">
+      <DependentUpon>DeportesWebService.svc</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IDeportesWebService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Web Services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

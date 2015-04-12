@@ -76,7 +76,17 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ServicioParticipante\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServicioRutina\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServicioUsuario\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -215,6 +225,10 @@
     <None Include="Service References\ServicioDeporte\WebService2.xsd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Service References\ServicioParticipante\ParticipantesWebService.wsdl" />
+    <None Include="Service References\ServicioParticipante\ParticipantesWebService.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\ServicioRutina\RutinasWebService.wsdl" />
     <None Include="Service References\ServicioRutina\RutinasWebService.xsd">
       <SubType>Designer</SubType>
@@ -223,6 +237,10 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServicioRutina\RutinasWebService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioUsuario\UsuariosWebService.wsdl" />
+    <None Include="Service References\ServicioUsuario\UsuariosWebService.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -234,7 +252,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServicioDeporte\" />
+    <WCFMetadataStorage Include="Service References\ServicioParticipante\" />
     <WCFMetadataStorage Include="Service References\ServicioRutina\" />
+    <WCFMetadataStorage Include="Service References\ServicioUsuario\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1395628239_save.png" />
@@ -292,6 +312,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ServicioRutina\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioUsuario\UsuariosWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioUsuario\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioUsuario\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioUsuario\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioParticipante\ParticipantesWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioParticipante\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioParticipante\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioParticipante\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

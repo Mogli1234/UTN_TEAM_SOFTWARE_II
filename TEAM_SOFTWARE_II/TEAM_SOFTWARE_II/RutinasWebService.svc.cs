@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.Text;
 using AccesoDatos;
 using AccesoDatos.Modelo;
+using TEAM_SOFTWARE_II.Interfaces;
 
 namespace TEAM_SOFTWARE_II
 {

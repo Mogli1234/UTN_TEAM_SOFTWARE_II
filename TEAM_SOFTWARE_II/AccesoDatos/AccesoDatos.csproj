@@ -47,6 +47,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Datos\Deportes.cs" />
+    <Compile Include="Datos\Usuarios.cs" />
+    <Compile Include="Entidades\Rutina.cs" />
     <Compile Include="Modelo\deporte.cs">
       <DependentUpon>UTN_SPORTS_Model.tt</DependentUpon>
     </Compile>
