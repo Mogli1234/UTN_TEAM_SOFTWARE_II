@@ -9,6 +9,6 @@ namespace AccesoDatos.Entidades
     class Rutina
     {
         public int id { get; set; }
-        public string rutina { get; set; }
+        public string rutina { get; set; } 
     }
 }
