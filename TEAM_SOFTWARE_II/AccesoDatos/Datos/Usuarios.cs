@@ -33,7 +33,7 @@ namespace AccesoDatos.Datos
             }
             return estado;
         }
-        #endregion
+        #endregion 
          
         #region ChargePasswords
         public Boolean verifyUser(string username , string password)
