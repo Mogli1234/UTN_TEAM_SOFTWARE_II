@@ -16,7 +16,7 @@ namespace Project_View
 {
     public partial class Create_Sport : Form
     {
-        ServicioDeporte.TEAM_SOFTWAREClient client = new ServicioDeporte.TEAM_SOFTWAREClient();
+        ServicioDeporte.DeportesWebServiceClient client = new ServicioDeporte.DeportesWebServiceClient();
         deporte sport = new deporte();
         public Create_Sport()
         {

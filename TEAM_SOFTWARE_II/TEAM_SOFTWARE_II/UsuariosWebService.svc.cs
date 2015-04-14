@@ -4,6 +4,8 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
+using AccesoDatos.Datos;
+using AccesoDatos.Modelo;
 using TEAM_SOFTWARE_II.Interfaces;
 
 namespace TEAM_SOFTWARE_II
@@ -12,8 +14,16 @@ namespace TEAM_SOFTWARE_II
     // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione UsuariosWebService.svc o UsuariosWebService.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class UsuariosWebService : IUsuariosWebService
     {
-        public void DoWork()
+        Usuarios user = new Usuarios();
+
+        public bool VerifyUsers(string username, string password)
         {
+            return user.verifyUser(username , password );
+        }
+
+        public bool NewUser(user oUser)
+        {
+            return user.InsertarUsuario(oUser);
         }
     }
 }

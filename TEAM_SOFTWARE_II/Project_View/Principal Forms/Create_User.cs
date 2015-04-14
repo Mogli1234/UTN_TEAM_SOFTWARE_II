@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AccesoDatos.Modelo;
+using Project_View.ServicioUsuario;
 
 
 namespace Project_View
@@ -14,7 +16,8 @@ namespace Project_View
     public partial class Create_User : Form
     {
       
-        
+        ServicioUsuario.UsuariosWebServiceClient client = new UsuariosWebServiceClient();
+        user us = new user();
         
         public Create_User()
         {
@@ -29,10 +32,23 @@ namespace Project_View
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-           
+           frm_Login log = new frm_Login();
             if (txtPass.Text.Equals(txtConfirmPass.Text))
             {
-                
+                us.Username = txtUsername.Text;
+                us.Email = txtEmail.Text;
+                us.Password = txtPass.Text;
+                if (client.NewUser(us))
+                {
+                    MessageBox.Show("Se ha creado con exito su usuario", "SUCESS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    log.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    MessageBox.Show("A ocurrido un error a la hora de ingresar su usuario, tiene crendenciales incorrectas", "FAILED", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    
+                }
             }
             else
             {
@@ -44,11 +60,8 @@ namespace Project_View
 
         public void Limpiar() 
         {
-            txtUsername.Clear();
-            txtEmail.Clear();
             txtPass.Clear();
             txtConfirmPass.Clear();
-            txtUsername.Focus();
         }
     }
 }

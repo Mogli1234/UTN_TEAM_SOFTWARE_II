@@ -206,6 +206,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\DataSources\AccesoDatos.Modelo.deporte.datasource" />
+    <None Include="Properties\DataSources\AccesoDatos.Sport.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -215,14 +216,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Service References\ServicioDeporte\WebService.wsdl" />
-    <None Include="Service References\ServicioDeporte\WebService.xsd">
+    <None Include="Service References\ServicioDeporte\DeportesWebService.wsdl" />
+    <None Include="Service References\ServicioDeporte\DeportesWebService.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServicioDeporte\WebService1.xsd">
+    <None Include="Service References\ServicioDeporte\DeportesWebService1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\ServicioDeporte\WebService2.xsd">
+    <None Include="Service References\ServicioDeporte\DeportesWebService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioDeporte\DeportesWebService3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServicioParticipante\ParticipantesWebService.wsdl" />
@@ -241,6 +245,12 @@
     </None>
     <None Include="Service References\ServicioUsuario\UsuariosWebService.wsdl" />
     <None Include="Service References\ServicioUsuario\UsuariosWebService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioUsuario\UsuariosWebService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioUsuario\UsuariosWebService2.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -287,21 +297,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ServicioDeporte\WebService.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ServicioDeporte\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ServicioDeporte\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ServicioDeporte\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\ServicioRutina\RutinasWebService.disco" />
   </ItemGroup>
   <ItemGroup>
@@ -317,21 +312,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ServicioUsuario\UsuariosWebService.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ServicioUsuario\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ServicioUsuario\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ServicioUsuario\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\ServicioParticipante\ParticipantesWebService.disco" />
   </ItemGroup>
   <ItemGroup>
@@ -342,6 +322,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\ServicioParticipante\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioDeporte\DeportesWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioDeporte\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioDeporte\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioDeporte\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioUsuario\UsuariosWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioUsuario\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioUsuario\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioUsuario\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

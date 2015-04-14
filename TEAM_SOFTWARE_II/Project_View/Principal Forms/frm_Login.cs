@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Project_View.ServicioUsuario;
 
 namespace Project_View
 {
     public partial class frm_Login : Form
     {
-        
+        ServicioUsuario.UsuariosWebServiceClient client = new UsuariosWebServiceClient();
         public frm_Login()
         {
             InitializeComponent();
@@ -20,7 +21,20 @@ namespace Project_View
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
+            if (client.VerifyUsers(txtUsername.Text,txtPassword.Text))
+            {
+                MessageBox.Show("Bienvinido "+txtUsername.Text, "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                Main_Menu main  = new Main_Menu();
+                main.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Error a la autentificación", "FAILED", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtUsername.Clear();
+                txtPassword.Clear();
+                
+            }
                 
         }
 
@@ -31,7 +45,14 @@ namespace Project_View
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            
+            Create_User create = new Create_User();
+            create.Show();
+            this.Hide();
+        }
+
+        private void frm_Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -134,7 +134,7 @@
             this.txtConfirmPass.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.txtConfirmPass.Location = new System.Drawing.Point(13, 275);
             this.txtConfirmPass.Name = "txtConfirmPass";
-            this.txtConfirmPass.PasswordChar = 's';
+            this.txtConfirmPass.PasswordChar = '*';
             this.txtConfirmPass.Size = new System.Drawing.Size(156, 20);
             this.txtConfirmPass.TabIndex = 7;
             // 

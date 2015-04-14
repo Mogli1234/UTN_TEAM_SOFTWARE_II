@@ -1,4 +1,8 @@
-﻿using System.ServiceModel;
+﻿using System;
+using System.ServiceModel;
+using System.Collections.Generic;
+using AccesoDatos;
+using AccesoDatos.Modelo;
 
 namespace TEAM_SOFTWARE_II.Interfaces
 {
@@ -6,7 +10,11 @@ namespace TEAM_SOFTWARE_II.Interfaces
     [ServiceContract]
     public interface IUsuariosWebService
     {
+        
         [OperationContract]
-        void DoWork();
+        Boolean VerifyUsers(string username, string password);
+
+        [OperationContract]
+        Boolean NewUser(user oUser);
     }
 }
