@@ -79,6 +79,7 @@ namespace AccesoDatos
 
        #endregion
 
+       #region Charger Sport
        public List<Sport> Charge_Sports()
        {
            List<Sport> sportsList = new List<Sport>();
@@ -96,5 +97,6 @@ namespace AccesoDatos
            }
            return sportsList;
        }
+       #endregion
     }
 }

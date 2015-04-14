@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2a6fff2b-5803-496d-b84d-72dbf2081323" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ff041fe7-b300-44f7-8f67-9f041365ff00" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,14 +19,15 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:7215/Web Services/WebService.svc" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:7215/DeportesWebService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WebService.xsd" MetadataType="Schema" ID="7aa1340e-dc8d-4905-bc11-d2d7af09a90c" SourceId="1" SourceUrl="http://localhost:7215/Web Services/WebService.svc?xsd=xsd1" />
-    <MetadataFile FileName="WebService.wsdl" MetadataType="Wsdl" ID="8c56b1a9-ae0b-409d-ab1b-95f27977a217" SourceId="1" SourceUrl="http://localhost:7215/Web Services/WebService.svc?wsdl" />
-    <MetadataFile FileName="WebService.disco" MetadataType="Disco" ID="da1f509d-ccac-461a-80d0-74b87cd68659" SourceId="1" SourceUrl="http://localhost:7215/Web Services/WebService.svc?disco" />
-    <MetadataFile FileName="WebService1.xsd" MetadataType="Schema" ID="167cc48a-9eb5-4542-885d-11d97b57ac83" SourceId="1" SourceUrl="http://localhost:7215/Web Services/WebService.svc?xsd=xsd2" />
-    <MetadataFile FileName="WebService2.xsd" MetadataType="Schema" ID="b89d5f6b-9f80-4e31-a89a-44b35508cd4c" SourceId="1" SourceUrl="http://localhost:7215/Web Services/WebService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DeportesWebService.wsdl" MetadataType="Wsdl" ID="cb7e284d-8fce-4293-8b50-c0c188946692" SourceId="1" SourceUrl="http://localhost:7215/DeportesWebService.svc?wsdl" />
+    <MetadataFile FileName="DeportesWebService.disco" MetadataType="Disco" ID="ffd1c188-b89d-4f97-8c7d-c8d1512b91bd" SourceId="1" SourceUrl="http://localhost:7215/DeportesWebService.svc?disco" />
+    <MetadataFile FileName="DeportesWebService.xsd" MetadataType="Schema" ID="609eb118-c4cb-473e-bf46-13f380017b99" SourceId="1" SourceUrl="http://localhost:7215/DeportesWebService.svc?xsd=xsd2" />
+    <MetadataFile FileName="DeportesWebService1.xsd" MetadataType="Schema" ID="e7c3911d-8ae3-452a-8e9e-46c6ebb15ecb" SourceId="1" SourceUrl="http://localhost:7215/DeportesWebService.svc?xsd=xsd3" />
+    <MetadataFile FileName="DeportesWebService2.xsd" MetadataType="Schema" ID="afebf926-dee9-46a5-9350-920a56feeddd" SourceId="1" SourceUrl="http://localhost:7215/DeportesWebService.svc?xsd=xsd0" />
+    <MetadataFile FileName="DeportesWebService3.xsd" MetadataType="Schema" ID="df757de8-3fd5-4230-b3df-d96c7c9ac360" SourceId="1" SourceUrl="http://localhost:7215/DeportesWebService.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

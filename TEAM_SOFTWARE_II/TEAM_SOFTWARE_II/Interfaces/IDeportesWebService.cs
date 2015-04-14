@@ -21,7 +21,8 @@ namespace TEAM_SOFTWARE_II.Interfaces
         [OperationContract]
         List<Sport> ChargeSportsList();
 
-        
+       
+
     }
     
 }

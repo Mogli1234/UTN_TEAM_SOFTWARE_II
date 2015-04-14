@@ -49,7 +49,11 @@
     <Compile Include="Datos\Deportes.cs" />
     <Compile Include="Datos\Usuarios.cs" />
     <Compile Include="Entidades\Rutina.cs" />
+<<<<<<< HEAD
     <Compile Include="Entidades\Usuario.cs" />
+=======
+    <Compile Include="Entidades\User.cs" />
+>>>>>>> Mogli
     <Compile Include="Modelo\deporte.cs">
       <DependentUpon>UTN_SPORTS_Model.tt</DependentUpon>
     </Compile>
