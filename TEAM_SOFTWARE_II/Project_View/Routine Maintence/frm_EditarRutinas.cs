@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AccesoDatos.Modelo;
+//using System.
 
 
 namespace Project_View
@@ -31,7 +33,7 @@ namespace Project_View
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-              
+
         }
 
         private void dtgEditRutinas_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -39,17 +41,17 @@ namespace Project_View
             txtRutina.Text = dtgEditRutinas.CurrentRow.Cells[1].Value.ToString();
         }
 
-     
+
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-           
+
             this.CargarRutina();
         }
 
         private void CargarRutina()
         {
-            
+
             dtgEditRutinas.Columns[0].Visible = false;
             dtgEditRutinas.Columns[1].HeaderText = "Detalle de Rutina";
         }
