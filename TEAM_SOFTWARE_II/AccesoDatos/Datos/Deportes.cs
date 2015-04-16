@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Entity.Migrations;
 using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Text;
@@ -64,7 +65,7 @@ namespace AccesoDatos
            {
                if (oSport != null)
                {
-                   modelo.deportes.Add(oSport);
+                   modelo.deportes.AddOrUpdate(oSport);
                    modelo.SaveChanges();
                    estado = true;
                }
@@ -79,7 +80,11 @@ namespace AccesoDatos
 
        #endregion
 
+<<<<<<< HEAD
        #region Charger Sport
+=======
+       #region Cargar lista con tabal de base datos
+>>>>>>> jose
        public List<Sport> Charge_Sports()
        {
            List<Sport> sportsList = new List<Sport>();
