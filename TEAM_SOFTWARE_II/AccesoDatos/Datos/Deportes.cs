@@ -80,11 +80,8 @@ namespace AccesoDatos
 
        #endregion
 
-<<<<<<< HEAD
+
        #region Charger Sport
-=======
-       #region Cargar lista con tabal de base datos
->>>>>>> jose
        public List<Sport> Charge_Sports()
        {
            List<Sport> sportsList = new List<Sport>();
