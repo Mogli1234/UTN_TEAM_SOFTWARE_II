@@ -21,18 +21,20 @@ namespace Project_View
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (client.VerifyUsers(txtUsername.Text,txtPassword.Text))
+            if (client.VerifyUsers(txtUsername.Text,txtPassword.Text)==1)
             {
+                
                 MessageBox.Show("Bienvinido "+txtUsername.Text, "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                Main_Menu main  = new Main_Menu();
+                Main_Menu main  = new Main_Menu(1);
                 main.Show();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Error a la autentificación", "FAILED", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                txtUsername.Clear();
-                txtPassword.Clear();
+                MessageBox.Show("Bienvinido " + txtUsername.Text, "SUCCESS", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                Main_Menu main = new Main_Menu(0);
+                main.Show();
+                this.Hide();
                 
             }
                 

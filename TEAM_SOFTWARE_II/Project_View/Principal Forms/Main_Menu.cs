@@ -13,9 +13,12 @@ namespace Project_View
 {
     public partial class Main_Menu : Form
     {
-        public Main_Menu()
+        private int is_admin = 0;
+        public Main_Menu(int admin)
         {
             InitializeComponent();
+            is_admin = admin;
+            
         }
 
         private void crearDeporteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -88,27 +91,7 @@ namespace Project_View
 
         private void enviarInformacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            try
-            {
-                MailMessage mail = new MailMessage();
-                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
-
-                mail.From = new MailAddress("jaimeesquivelgomez@gmail.com");
-                mail.To.Add("jaimeesquivelgomez@gmail.com");
-                mail.Subject = "Test Mail";
-                mail.Body = "This is for testing SMTP mail from GMAIL";
-
-                SmtpServer.Port = 587;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("Jaime A. Esquivel", "Jaime123");
-                SmtpServer.EnableSsl = true;
-
-                SmtpServer.Send(mail);
-                MessageBox.Show("mail Send");
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.ToString());
-            }
+           
         }
 
         private void participanteToolStripMenuItem_Click(object sender, EventArgs e)
@@ -127,6 +110,19 @@ namespace Project_View
         {
             AboutUs about = new AboutUs();
             about.ShowDialog();
+        }
+
+        private void Main_Menu_Load(object sender, EventArgs e)
+        {
+            if (is_admin == 0)
+            {
+                crearDeporte.Enabled = false;
+                btnParticipante.Enabled = false;
+                crearRutina.Enabled = false;
+                btnEditSport.Enabled = false;
+                rutina.Enabled = false;
+                editparticipante.Enabled = false;
+            }
         }
     }
 }

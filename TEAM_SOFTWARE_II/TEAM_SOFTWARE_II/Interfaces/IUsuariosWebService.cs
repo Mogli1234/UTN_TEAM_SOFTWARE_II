@@ -12,7 +12,7 @@ namespace TEAM_SOFTWARE_II.Interfaces
     {
         
         [OperationContract]
-        Boolean VerifyUsers(string username, string password);
+        int VerifyUsers(string username, string password);
 
         [OperationContract]
         Boolean NewUser(user oUser);

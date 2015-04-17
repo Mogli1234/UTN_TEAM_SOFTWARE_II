@@ -16,9 +16,9 @@ namespace TEAM_SOFTWARE_II
     {
         Usuarios user = new Usuarios();
 
-        public bool VerifyUsers(string username, string password)
+        public int VerifyUsers(string username, string password)
         {
-            return user.verifyUser(username , password );
+            return user.is_Admin(username , password );
         }
 
         public bool NewUser(user oUser)

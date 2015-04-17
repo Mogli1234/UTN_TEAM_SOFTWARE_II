@@ -35,21 +35,23 @@ namespace AccesoDatos.Datos
         }
         #endregion  
          
-        #region ChargePasswords
-        public Boolean verifyUser(string username , string password)
+        #region Verifyis admin
+        public int is_Admin(string username, string password)
         {
+            int retorno = 0;
             try
             {
                 List<User> userList = new List<User>();
                 var query = from us in modelo.users
-                            select new { us.Username, us.Password };
+                            select new { us.Username, us.Password, us.Role };
                 foreach (var data in query.ToList())
                 {
-                    
+
                     userList.Add(new User()
                     {
-                    username = data.Username,
-                    password = data.Password
+                        username = data.Username,
+                        password = data.Password,
+                        role = data.Role
                     });
                 }
 
@@ -59,17 +61,22 @@ namespace AccesoDatos.Datos
                     {
                         if (datos.password.Equals(password))
                         {
-                            estado = true;
+                            
+                                retorno = datos.role;
+                            
+
                         }
                     }
+
                 }
             }
             catch (Exception)
             {
-                estado = false;
+                retorno = 0;
             }
-            return estado;
+            return retorno;
         }
         #endregion
+       
     }
 }

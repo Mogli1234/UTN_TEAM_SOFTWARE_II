@@ -16,10 +16,10 @@ namespace Project_View.ServicioUsuario {
     public interface IUsuariosWebService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuariosWebService/VerifyUsers", ReplyAction="http://tempuri.org/IUsuariosWebService/VerifyUsersResponse")]
-        bool VerifyUsers(string username, string password);
+        int VerifyUsers(string username, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuariosWebService/VerifyUsers", ReplyAction="http://tempuri.org/IUsuariosWebService/VerifyUsersResponse")]
-        System.Threading.Tasks.Task<bool> VerifyUsersAsync(string username, string password);
+        System.Threading.Tasks.Task<int> VerifyUsersAsync(string username, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuariosWebService/NewUser", ReplyAction="http://tempuri.org/IUsuariosWebService/NewUserResponse")]
         bool NewUser(AccesoDatos.Modelo.user oUser);
@@ -55,11 +55,11 @@ namespace Project_View.ServicioUsuario {
                 base(binding, remoteAddress) {
         }
         
-        public bool VerifyUsers(string username, string password) {
+        public int VerifyUsers(string username, string password) {
             return base.Channel.VerifyUsers(username, password);
         }
         
-        public System.Threading.Tasks.Task<bool> VerifyUsersAsync(string username, string password) {
+        public System.Threading.Tasks.Task<int> VerifyUsersAsync(string username, string password) {
             return base.Channel.VerifyUsersAsync(username, password);
         }
         
