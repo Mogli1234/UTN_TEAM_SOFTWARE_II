@@ -8,6 +8,8 @@ using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AccesoDatos.Entidades;
+using Project_View.Principal_Forms;
 
 namespace Project_View
 {
@@ -91,7 +93,8 @@ namespace Project_View
 
         private void enviarInformacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            Sed_Mail mail = new Sed_Mail();
+            mail.ShowDialog();
         }
 
         private void participanteToolStripMenuItem_Click(object sender, EventArgs e)

@@ -2,6 +2,7 @@
 using System.ServiceModel;
 using System.Collections.Generic;
 using AccesoDatos;
+using AccesoDatos.Entidades;
 using AccesoDatos.Modelo;
 
 namespace TEAM_SOFTWARE_II.Interfaces
@@ -16,5 +17,8 @@ namespace TEAM_SOFTWARE_II.Interfaces
 
         [OperationContract]
         Boolean NewUser(user oUser);
+
+        [OperationContract]
+        List<String> ChargeList();
     }
 }

@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Datos\Deportes.cs" />
     <Compile Include="Datos\Usuarios.cs" />
+    <Compile Include="Entidades\Email.cs" />
     <Compile Include="Entidades\Rutina.cs" />
     <Compile Include="Entidades\Usuario.cs" />
     <Compile Include="Entidades\User.cs" />

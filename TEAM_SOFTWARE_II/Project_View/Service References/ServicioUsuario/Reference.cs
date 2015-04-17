@@ -26,6 +26,12 @@ namespace Project_View.ServicioUsuario {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuariosWebService/NewUser", ReplyAction="http://tempuri.org/IUsuariosWebService/NewUserResponse")]
         System.Threading.Tasks.Task<bool> NewUserAsync(AccesoDatos.Modelo.user oUser);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuariosWebService/ChargeList", ReplyAction="http://tempuri.org/IUsuariosWebService/ChargeListResponse")]
+        AccesoDatos.Entidades.Usuario[] ChargeList();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuariosWebService/ChargeList", ReplyAction="http://tempuri.org/IUsuariosWebService/ChargeListResponse")]
+        System.Threading.Tasks.Task<AccesoDatos.Entidades.Usuario[]> ChargeListAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -69,6 +75,14 @@ namespace Project_View.ServicioUsuario {
         
         public System.Threading.Tasks.Task<bool> NewUserAsync(AccesoDatos.Modelo.user oUser) {
             return base.Channel.NewUserAsync(oUser);
+        }
+        
+        public AccesoDatos.Entidades.Usuario[] ChargeList() {
+            return base.Channel.ChargeList();
+        }
+        
+        public System.Threading.Tasks.Task<AccesoDatos.Entidades.Usuario[]> ChargeListAsync() {
+            return base.Channel.ChargeListAsync();
         }
     }
 }

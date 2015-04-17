@@ -103,6 +103,16 @@ namespace Project_View.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1395628423_new_mail {
+            get {
+                object obj = ResourceManager.GetObject("1395628423_new-mail", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1395628427_delete1 {
             get {
                 object obj = ResourceManager.GetObject("1395628427_delete1", resourceCulture);

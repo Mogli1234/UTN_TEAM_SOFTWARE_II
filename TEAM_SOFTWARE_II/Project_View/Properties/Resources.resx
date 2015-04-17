@@ -133,13 +133,16 @@
   <data name="1395628150_add-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1395628150_add-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1395628811_cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1395628811_cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1395628632_edit-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1395628632_edit-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1395628427_delete1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1395628427_delete1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1395628811_cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1395628811_cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1395628423_new-mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1395628423_new-mail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

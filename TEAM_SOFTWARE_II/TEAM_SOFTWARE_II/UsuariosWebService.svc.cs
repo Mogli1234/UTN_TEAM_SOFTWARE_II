@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using AccesoDatos.Datos;
+using AccesoDatos.Entidades;
 using AccesoDatos.Modelo;
 using TEAM_SOFTWARE_II.Interfaces;
 
@@ -24,6 +25,11 @@ namespace TEAM_SOFTWARE_II
         public bool NewUser(user oUser)
         {
             return user.InsertarUsuario(oUser);
+        }
+
+        public List<String> ChargeList()
+        {
+            return user.ChargerMailsList();
         }
     }
 }

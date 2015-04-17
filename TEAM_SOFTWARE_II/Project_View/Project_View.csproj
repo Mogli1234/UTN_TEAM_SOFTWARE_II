@@ -59,6 +59,12 @@
     <Compile Include="Principal Forms\Main_Menu.designer.cs">
       <DependentUpon>Main_Menu.cs</DependentUpon>
     </Compile>
+    <Compile Include="Principal Forms\Sed_Mail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Principal Forms\Sed_Mail.Designer.cs">
+      <DependentUpon>Sed_Mail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Routine Maintence\frm_EditarRutinas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     <EmbeddedResource Include="Principal Forms\Main_Menu.resx">
       <DependentUpon>Main_Menu.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Principal Forms\Sed_Mail.resx">
+      <DependentUpon>Sed_Mail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Routine Maintence\frm_EditarRutinas.resx">
       <DependentUpon>frm_EditarRutinas.cs</DependentUpon>
     </EmbeddedResource>
@@ -205,6 +214,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\AccesoDatos.Entidades.Usuario.datasource" />
     <None Include="Properties\DataSources\AccesoDatos.Modelo.deporte.datasource" />
     <None Include="Properties\DataSources\AccesoDatos.Sport.datasource" />
     <None Include="Properties\Settings.settings">
@@ -251,6 +261,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServicioUsuario\UsuariosWebService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioUsuario\UsuariosWebService3.xsd">
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
@@ -355,6 +368,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1395628423_new-mail.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
