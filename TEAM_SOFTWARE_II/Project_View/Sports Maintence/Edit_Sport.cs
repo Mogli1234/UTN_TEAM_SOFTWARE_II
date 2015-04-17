@@ -16,9 +16,9 @@ namespace Project_View
 {
     public partial class Edit_Sport : Form
     {
-        ServicioDeporte.DeportesWebServiceClient client = new ServicioDeporte.DeportesWebServiceClient();
-        deporte osport = new deporte();
-        
+        private ServicioDeporte.DeportesWebServiceClient client = new ServicioDeporte.DeportesWebServiceClient();
+        private deporte osport = new deporte();
+
         public Edit_Sport()
         {
             InitializeComponent();
@@ -39,19 +39,31 @@ namespace Project_View
         {
             txtSport.Text = dtgSports.Rows[e.RowIndex].Cells[1].Value.ToString();
             txtDescription.Text = dtgSports.Rows[e.RowIndex].Cells[2].Value.ToString();
-            
+
             txtSport.Enabled = true;
             txtDescription.Enabled = true;
+
 
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            
+            osport.Deporte1 = txtSport.Text;
+            osport.Descripcion = txtDescription.Text;
+            if (client.UpdateSport(osport))
+            {
+                MessageBox.Show("El deporte a sido actualizado exitosamente", "SUCESS", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+
+            }
+            else
+            {
+                MessageBox.Show("Ah ocurrido un problema a la hora de actualizar su deporte", "FAILED", MessageBoxButtons.OK, MessageBoxIcon.Error);                
+            }
             this.LimpiarTextFlieds();
             this.cargarTable();
-
         }
+
+        #region Metodos de limpiar y cargar
         private void cargarTable()
         {
             dtgSports.DataSource = client.ChargeSportsList();
@@ -59,7 +71,8 @@ namespace Project_View
             dtgSports.Columns[2].HeaderText = "Descripción";
             dtgSports.Columns[1].HeaderText = "Deporte";
         }
-        private void LimpiarTextFlieds() 
+
+        private void LimpiarTextFlieds()
         {
             txtSport.Enabled = false;
             txtDescription.Enabled = false;
@@ -67,12 +80,14 @@ namespace Project_View
             txtDescription.Clear();
 
         }
+        #endregion
 
+        #region Evento btnDeletedClick
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (client.DeleteSport(osport))
             {
-                MessageBox.Show("El deporte a sido eliminado exitosamente", "SUCESS", MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+                MessageBox.Show("El deporte a sido eliminado exitosamente", "SUCESS", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
             else
             {
@@ -80,7 +95,9 @@ namespace Project_View
             }
             this.cargarTable();
         }
+        #endregion
 
+        #region cellEventeDoubleckil
         private void dtgSports_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             osport.id = Convert.ToInt16(dtgSports.Rows[e.RowIndex].Cells[0].Value);
@@ -88,6 +105,8 @@ namespace Project_View
             osport.Descripcion = dtgSports.Rows[e.RowIndex].Cells[2].Value.ToString();
 
         }
+        #endregion
+       
 
     }
 }

@@ -21,6 +21,8 @@ namespace TEAM_SOFTWARE_II.Interfaces
         [OperationContract]
         Boolean DeleteSport(deporte oSport);
 
+        [OperationContract]
+        Boolean UpdateSport(deporte oSport);
 
 
     }

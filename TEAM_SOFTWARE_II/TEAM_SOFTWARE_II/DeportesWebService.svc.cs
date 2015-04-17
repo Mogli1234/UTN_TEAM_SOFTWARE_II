@@ -31,5 +31,10 @@ namespace TEAM_SOFTWARE_II
         {
             return deportes.DeleteSport(oSport);
         }
+
+        public bool UpdateSport(deporte oSport)
+        {
+            return deportes.UpdateSport(oSport);
+        }
     }
 }

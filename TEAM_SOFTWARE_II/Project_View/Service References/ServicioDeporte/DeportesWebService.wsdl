@@ -26,6 +26,12 @@
   <wsdl:message name="IDeportesWebService_DeleteSport_OutputMessage">
     <wsdl:part name="parameters" element="tns:DeleteSportResponse" />
   </wsdl:message>
+  <wsdl:message name="IDeportesWebService_UpdateSport_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSport" />
+  </wsdl:message>
+  <wsdl:message name="IDeportesWebService_UpdateSport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateSportResponse" />
+  </wsdl:message>
   <wsdl:portType name="IDeportesWebService">
     <wsdl:operation name="createSport">
       <wsdl:input wsaw:Action="http://tempuri.org/IDeportesWebService/createSport" message="tns:IDeportesWebService_createSport_InputMessage" />
@@ -38,6 +44,10 @@
     <wsdl:operation name="DeleteSport">
       <wsdl:input wsaw:Action="http://tempuri.org/IDeportesWebService/DeleteSport" message="tns:IDeportesWebService_DeleteSport_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IDeportesWebService/DeleteSportResponse" message="tns:IDeportesWebService_DeleteSport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IDeportesWebService/UpdateSport" message="tns:IDeportesWebService_UpdateSport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IDeportesWebService/UpdateSportResponse" message="tns:IDeportesWebService_UpdateSport_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IDeportesWebService" type="tns:IDeportesWebService">
@@ -62,6 +72,15 @@
     </wsdl:operation>
     <wsdl:operation name="DeleteSport">
       <soap:operation soapAction="http://tempuri.org/IDeportesWebService/DeleteSport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateSport">
+      <soap:operation soapAction="http://tempuri.org/IDeportesWebService/UpdateSport" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

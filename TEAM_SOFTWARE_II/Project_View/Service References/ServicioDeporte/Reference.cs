@@ -32,6 +32,12 @@ namespace Project_View.ServicioDeporte {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeportesWebService/DeleteSport", ReplyAction="http://tempuri.org/IDeportesWebService/DeleteSportResponse")]
         System.Threading.Tasks.Task<bool> DeleteSportAsync(AccesoDatos.Modelo.deporte oSport);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeportesWebService/UpdateSport", ReplyAction="http://tempuri.org/IDeportesWebService/UpdateSportResponse")]
+        bool UpdateSport(AccesoDatos.Modelo.deporte oSport);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeportesWebService/UpdateSport", ReplyAction="http://tempuri.org/IDeportesWebService/UpdateSportResponse")]
+        System.Threading.Tasks.Task<bool> UpdateSportAsync(AccesoDatos.Modelo.deporte oSport);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -83,6 +89,14 @@ namespace Project_View.ServicioDeporte {
         
         public System.Threading.Tasks.Task<bool> DeleteSportAsync(AccesoDatos.Modelo.deporte oSport) {
             return base.Channel.DeleteSportAsync(oSport);
+        }
+        
+        public bool UpdateSport(AccesoDatos.Modelo.deporte oSport) {
+            return base.Channel.UpdateSport(oSport);
+        }
+        
+        public System.Threading.Tasks.Task<bool> UpdateSportAsync(AccesoDatos.Modelo.deporte oSport) {
+            return base.Channel.UpdateSportAsync(oSport);
         }
     }
 }
