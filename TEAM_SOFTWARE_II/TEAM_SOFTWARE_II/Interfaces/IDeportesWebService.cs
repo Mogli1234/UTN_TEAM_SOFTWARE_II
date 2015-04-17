@@ -10,9 +10,6 @@ namespace TEAM_SOFTWARE_II.Interfaces
     [ServiceContract]
     public interface IDeportesWebService
     {
-        [OperationContract]
-        string GetData(int value);
-
         // TODO: agregue aquí sus operaciones de servicio
 
         [OperationContract]
@@ -21,7 +18,10 @@ namespace TEAM_SOFTWARE_II.Interfaces
         [OperationContract]
         List<Sport> ChargeSportsList();
 
-       
+        [OperationContract]
+        Boolean DeleteSport(deporte oSport);
+
+
 
     }
     

@@ -106,6 +106,7 @@
             this.dtgSports.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgSports.Size = new System.Drawing.Size(490, 249);
             this.dtgSports.TabIndex = 6;
+            this.dtgSports.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSports_CellClick);
             this.dtgSports.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgSports_CellContentDoubleClick);
             // 
             // buttonX3

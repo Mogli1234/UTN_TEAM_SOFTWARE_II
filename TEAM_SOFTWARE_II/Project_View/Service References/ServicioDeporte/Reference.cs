@@ -15,12 +15,6 @@ namespace Project_View.ServicioDeporte {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServicioDeporte.IDeportesWebService")]
     public interface IDeportesWebService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeportesWebService/GetData", ReplyAction="http://tempuri.org/IDeportesWebService/GetDataResponse")]
-        string GetData(int value);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeportesWebService/GetData", ReplyAction="http://tempuri.org/IDeportesWebService/GetDataResponse")]
-        System.Threading.Tasks.Task<string> GetDataAsync(int value);
-        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeportesWebService/createSport", ReplyAction="http://tempuri.org/IDeportesWebService/createSportResponse")]
         bool createSport(AccesoDatos.Modelo.deporte sport);
         
@@ -32,6 +26,12 @@ namespace Project_View.ServicioDeporte {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeportesWebService/ChargeSportsList", ReplyAction="http://tempuri.org/IDeportesWebService/ChargeSportsListResponse")]
         System.Threading.Tasks.Task<AccesoDatos.Sport[]> ChargeSportsListAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeportesWebService/DeleteSport", ReplyAction="http://tempuri.org/IDeportesWebService/DeleteSportResponse")]
+        bool DeleteSport(AccesoDatos.Modelo.deporte oSport);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IDeportesWebService/DeleteSport", ReplyAction="http://tempuri.org/IDeportesWebService/DeleteSportResponse")]
+        System.Threading.Tasks.Task<bool> DeleteSportAsync(AccesoDatos.Modelo.deporte oSport);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -61,14 +61,6 @@ namespace Project_View.ServicioDeporte {
                 base(binding, remoteAddress) {
         }
         
-        public string GetData(int value) {
-            return base.Channel.GetData(value);
-        }
-        
-        public System.Threading.Tasks.Task<string> GetDataAsync(int value) {
-            return base.Channel.GetDataAsync(value);
-        }
-        
         public bool createSport(AccesoDatos.Modelo.deporte sport) {
             return base.Channel.createSport(sport);
         }
@@ -83,6 +75,14 @@ namespace Project_View.ServicioDeporte {
         
         public System.Threading.Tasks.Task<AccesoDatos.Sport[]> ChargeSportsListAsync() {
             return base.Channel.ChargeSportsListAsync();
+        }
+        
+        public bool DeleteSport(AccesoDatos.Modelo.deporte oSport) {
+            return base.Channel.DeleteSport(oSport);
+        }
+        
+        public System.Threading.Tasks.Task<bool> DeleteSportAsync(AccesoDatos.Modelo.deporte oSport) {
+            return base.Channel.DeleteSportAsync(oSport);
         }
     }
 }

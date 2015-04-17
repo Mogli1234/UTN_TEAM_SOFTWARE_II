@@ -16,11 +16,7 @@ namespace TEAM_SOFTWARE_II
     public class DeportesWebService : IDeportesWebService
     {
         Deportes deportes = new Deportes();
-        public string GetData(int value)
-        {
-            return string.Format("You entered: {0}", value);
-        }
-
+       
         public bool createSport(deporte sport)
         {
             return deportes.crearDeporte(sport);
@@ -31,6 +27,9 @@ namespace TEAM_SOFTWARE_II
             return deportes.Charge_Sports();
         }
 
-        
+        public bool DeleteSport(deporte oSport)
+        {
+            return deportes.DeleteSport(oSport);
+        }
     }
 }

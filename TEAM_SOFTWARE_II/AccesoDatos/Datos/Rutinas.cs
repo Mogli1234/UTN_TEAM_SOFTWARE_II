@@ -27,7 +27,7 @@ namespace AccesoDatos
                     this.estado = true;
                 }
             }
-            catch (Exception e)
+            catch (Exception)
             {
                // throw e;
                 return estado;
@@ -45,9 +45,9 @@ namespace AccesoDatos
                 oRutinasContainer.SaveChanges();
                 estado = true;
             }
-            catch (Exception e)
+            catch (Exception )
             {
-                throw e;
+                
                 return estado;
             }
             return estado;
@@ -63,10 +63,10 @@ namespace AccesoDatos
             oRutinasContainer.SaveChanges();
                 estado = true;
             }
-            catch (Exception error)
+            catch (Exception)
             {
 
-                throw error;
+                
                 return estado;
             }
             return estado;

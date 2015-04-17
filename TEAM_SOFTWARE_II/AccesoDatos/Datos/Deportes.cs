@@ -44,8 +44,16 @@ namespace AccesoDatos
            {
                if (oSport != null)
                {
-                   modelo.deportes.Remove(oSport);
-                   estado = true;
+                  
+                   var deleted = (from n in modelo.deportes where n.id == oSport.id select n).FirstOrDefault();
+
+                   if (deleted != null)
+                   {
+                       modelo.deportes.Remove(deleted);
+                       modelo.SaveChanges();
+                       estado = true;     
+                   }
+                  
                }
 
            }
@@ -70,7 +78,7 @@ namespace AccesoDatos
                    estado = true;
                }
            }
-           catch (Exception e)
+           catch (Exception)
            {
 
                return estado;
@@ -81,7 +89,6 @@ namespace AccesoDatos
        #endregion
 
        #region Charger Sport
-
        public List<Sport> Charge_Sports() 
        {
            List<Sport> sportsList = new List<Sport>();
