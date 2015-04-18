@@ -26,6 +26,18 @@ namespace Project_View.ServicioRutina {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRutinas/EditarRutina", ReplyAction="http://tempuri.org/IRutinas/EditarRutinaResponse")]
         System.Threading.Tasks.Task<bool> EditarRutinaAsync(AccesoDatos.Modelo.rutina oRutinas);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRutinas/EliminarRutina", ReplyAction="http://tempuri.org/IRutinas/EliminarRutinaResponse")]
+        bool EliminarRutina(AccesoDatos.Modelo.rutina oRutina);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRutinas/EliminarRutina", ReplyAction="http://tempuri.org/IRutinas/EliminarRutinaResponse")]
+        System.Threading.Tasks.Task<bool> EliminarRutinaAsync(AccesoDatos.Modelo.rutina oRutina);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRutinas/ChargerRutinas", ReplyAction="http://tempuri.org/IRutinas/ChargerRutinasResponse")]
+        AccesoDatos.Rutina[] ChargerRutinas();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IRutinas/ChargerRutinas", ReplyAction="http://tempuri.org/IRutinas/ChargerRutinasResponse")]
+        System.Threading.Tasks.Task<AccesoDatos.Rutina[]> ChargerRutinasAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -69,6 +81,22 @@ namespace Project_View.ServicioRutina {
         
         public System.Threading.Tasks.Task<bool> EditarRutinaAsync(AccesoDatos.Modelo.rutina oRutinas) {
             return base.Channel.EditarRutinaAsync(oRutinas);
+        }
+        
+        public bool EliminarRutina(AccesoDatos.Modelo.rutina oRutina) {
+            return base.Channel.EliminarRutina(oRutina);
+        }
+        
+        public System.Threading.Tasks.Task<bool> EliminarRutinaAsync(AccesoDatos.Modelo.rutina oRutina) {
+            return base.Channel.EliminarRutinaAsync(oRutina);
+        }
+        
+        public AccesoDatos.Rutina[] ChargerRutinas() {
+            return base.Channel.ChargerRutinas();
+        }
+        
+        public System.Threading.Tasks.Task<AccesoDatos.Rutina[]> ChargerRutinasAsync() {
+            return base.Channel.ChargerRutinasAsync();
         }
     }
 }

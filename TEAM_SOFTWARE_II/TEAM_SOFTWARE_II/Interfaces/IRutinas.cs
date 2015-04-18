@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ServiceModel;
+using AccesoDatos;
 using AccesoDatos.Modelo;
 
 namespace TEAM_SOFTWARE_II.Interfaces
@@ -17,5 +19,11 @@ namespace TEAM_SOFTWARE_II.Interfaces
 
         [OperationContract]
         Boolean EditarRutina(rutina oRutinas);
+
+        [OperationContract]
+        Boolean EliminarRutina(rutina oRutina);
+
+        [OperationContract]
+        List<Rutina> ChargerRutinas();
     }
 }

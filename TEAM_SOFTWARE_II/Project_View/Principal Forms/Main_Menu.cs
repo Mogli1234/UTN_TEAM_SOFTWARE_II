@@ -127,5 +127,12 @@ namespace Project_View
                 editparticipante.Enabled = false;
             }
         }
+
+        private void Main_Menu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            frm_Login lo = new frm_Login();
+            lo.Show();
+            this.Hide();
+        }
     }
 }

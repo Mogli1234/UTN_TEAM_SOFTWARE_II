@@ -7,16 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Project_View.ServicioRutina;
 
 namespace Project_View
 {
     public partial class frm_VerRutinas : Form
     {
+        private ServicioRutina.RutinasClient oRutinasClient;
         
 
         public frm_VerRutinas()
         {
             InitializeComponent();
+            oRutinasClient =  new RutinasClient();
         }        
 
         private void frm_VerRutinas_Load(object sender, EventArgs e)
@@ -31,7 +34,7 @@ namespace Project_View
         
         public void CargarRutinas()
         {
-            
+            dtgRutinas.DataSource = oRutinasClient.ChargerRutinas();
             dtgRutinas.Columns[1].HeaderText = "Detalle Rutina";
             dtgRutinas.Columns[0].Visible = false;
         }

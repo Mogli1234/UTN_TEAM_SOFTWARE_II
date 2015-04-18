@@ -96,20 +96,20 @@
             this.crearDeporte,
             this.verDeportesToolStripMenuItem});
             this.btnDeporte.Name = "btnDeporte";
-            this.btnDeporte.Size = new System.Drawing.Size(152, 22);
+            this.btnDeporte.Size = new System.Drawing.Size(143, 22);
             this.btnDeporte.Text = "Deporte";
             // 
             // crearDeporte
             // 
             this.crearDeporte.Name = "crearDeporte";
-            this.crearDeporte.Size = new System.Drawing.Size(152, 22);
+            this.crearDeporte.Size = new System.Drawing.Size(147, 22);
             this.crearDeporte.Text = "Crear Deporte";
             this.crearDeporte.Click += new System.EventHandler(this.crearDeporteToolStripMenuItem_Click);
             // 
             // verDeportesToolStripMenuItem
             // 
             this.verDeportesToolStripMenuItem.Name = "verDeportesToolStripMenuItem";
-            this.verDeportesToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.verDeportesToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.verDeportesToolStripMenuItem.Text = "Ver Deportes";
             this.verDeportesToolStripMenuItem.Click += new System.EventHandler(this.verDeportesToolStripMenuItem_Click);
             // 
@@ -119,7 +119,7 @@
             this.btnParticipante,
             this.verParticipantesToolStripMenuItem});
             this.participante.Name = "participante";
-            this.participante.Size = new System.Drawing.Size(152, 22);
+            this.participante.Size = new System.Drawing.Size(143, 22);
             this.participante.Text = "Participantes";
             // 
             // btnParticipante
@@ -142,32 +142,32 @@
             this.crearRutina,
             this.verRutinasToolStripMenuItem});
             this.btnRutina.Name = "btnRutina";
-            this.btnRutina.Size = new System.Drawing.Size(152, 22);
+            this.btnRutina.Size = new System.Drawing.Size(143, 22);
             this.btnRutina.Text = "Rutina";
             // 
             // crearRutina
             // 
             this.crearRutina.Name = "crearRutina";
-            this.crearRutina.Size = new System.Drawing.Size(152, 22);
+            this.crearRutina.Size = new System.Drawing.Size(139, 22);
             this.crearRutina.Text = "Crear Rutina";
             this.crearRutina.Click += new System.EventHandler(this.crearRutinaToolStripMenuItem_Click);
             // 
             // verRutinasToolStripMenuItem
             // 
             this.verRutinasToolStripMenuItem.Name = "verRutinasToolStripMenuItem";
-            this.verRutinasToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.verRutinasToolStripMenuItem.Size = new System.Drawing.Size(139, 22);
             this.verRutinasToolStripMenuItem.Text = "Ver Rutinas";
             this.verRutinasToolStripMenuItem.Click += new System.EventHandler(this.verRutinasToolStripMenuItem_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(149, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(140, 6);
             // 
             // btnSalir
             // 
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(152, 22);
+            this.btnSalir.Size = new System.Drawing.Size(143, 22);
             this.btnSalir.Text = "&Cerrar Sesion";
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
@@ -184,21 +184,21 @@
             // btnEditSport
             // 
             this.btnEditSport.Name = "btnEditSport";
-            this.btnEditSport.Size = new System.Drawing.Size(152, 22);
+            this.btnEditSport.Size = new System.Drawing.Size(137, 22);
             this.btnEditSport.Text = "Deporte";
             this.btnEditSport.Click += new System.EventHandler(this.dtnEditSport_Click);
             // 
             // rutina
             // 
             this.rutina.Name = "rutina";
-            this.rutina.Size = new System.Drawing.Size(152, 22);
+            this.rutina.Size = new System.Drawing.Size(137, 22);
             this.rutina.Text = "Rutina";
             this.rutina.Click += new System.EventHandler(this.rutinaToolStripMenuItem_Click);
             // 
             // editparticipante
             // 
             this.editparticipante.Name = "editparticipante";
-            this.editparticipante.Size = new System.Drawing.Size(152, 22);
+            this.editparticipante.Size = new System.Drawing.Size(137, 22);
             this.editparticipante.Text = "Participante";
             this.editparticipante.Click += new System.EventHandler(this.participanteToolStripMenuItem_Click);
             // 
@@ -223,7 +223,7 @@
             // btnAsignar
             // 
             this.btnAsignar.Name = "btnAsignar";
-            this.btnAsignar.Size = new System.Drawing.Size(152, 22);
+            this.btnAsignar.Size = new System.Drawing.Size(114, 22);
             this.btnAsignar.Text = "Asignar";
             this.btnAsignar.Click += new System.EventHandler(this.btnAsignar_Click_1);
             // 
@@ -289,6 +289,7 @@
             this.Name = "Main_Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu Principal";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_Menu_FormClosed);
             this.Load += new System.EventHandler(this.Main_Menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
