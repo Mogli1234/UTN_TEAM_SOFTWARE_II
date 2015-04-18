@@ -44,7 +44,6 @@ namespace AccesoDatos
            {
                if (oSport != null)
                {
-                  
                    var deleted = (from n in modelo.deportes where n.id == oSport.id select n).FirstOrDefault();
 
                    if (deleted != null)
@@ -53,7 +52,6 @@ namespace AccesoDatos
                        modelo.SaveChanges();
                        estado = true;     
                    }
-                  
                }
 
            }
@@ -66,7 +64,6 @@ namespace AccesoDatos
        #endregion
 
         #region Metodo de actualizar
-
        public Boolean UpdateSport(deporte oSport)
        {
            try
@@ -80,12 +77,10 @@ namespace AccesoDatos
            }
            catch (Exception)
            {
-
                return estado;
            }
            return estado;
        }
-
        #endregion
 
        #region Charger Sport
