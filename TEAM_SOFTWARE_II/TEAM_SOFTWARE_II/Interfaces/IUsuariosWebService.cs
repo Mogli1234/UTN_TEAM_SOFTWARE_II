@@ -11,12 +11,10 @@ namespace TEAM_SOFTWARE_II.Interfaces
     [ServiceContract]
     public interface IUsuariosWebService
     {
-        
-        [OperationContract]
-        int VerifyUsers(string username, string password);
-
         [OperationContract]
         Boolean NewUser(user oUser);
+        [OperationContract]
+        int VerifyUsers(string username, string password);
 
         [OperationContract]
         List<String> ChargeList();

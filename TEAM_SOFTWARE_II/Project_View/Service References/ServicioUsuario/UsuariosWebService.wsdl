@@ -5,20 +5,20 @@
       <xsd:import schemaLocation="http://localhost:7215/UsuariosWebService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
       <xsd:import schemaLocation="http://localhost:7215/UsuariosWebService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
       <xsd:import schemaLocation="http://localhost:7215/UsuariosWebService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AccesoDatos.Modelo" />
-      <xsd:import schemaLocation="http://localhost:7215/UsuariosWebService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/AccesoDatos.Entidades" />
+      <xsd:import schemaLocation="http://localhost:7215/UsuariosWebService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IUsuariosWebService_VerifyUsers_InputMessage">
-    <wsdl:part name="parameters" element="tns:VerifyUsers" />
-  </wsdl:message>
-  <wsdl:message name="IUsuariosWebService_VerifyUsers_OutputMessage">
-    <wsdl:part name="parameters" element="tns:VerifyUsersResponse" />
-  </wsdl:message>
   <wsdl:message name="IUsuariosWebService_NewUser_InputMessage">
     <wsdl:part name="parameters" element="tns:NewUser" />
   </wsdl:message>
   <wsdl:message name="IUsuariosWebService_NewUser_OutputMessage">
     <wsdl:part name="parameters" element="tns:NewUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IUsuariosWebService_VerifyUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyUsers" />
+  </wsdl:message>
+  <wsdl:message name="IUsuariosWebService_VerifyUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerifyUsersResponse" />
   </wsdl:message>
   <wsdl:message name="IUsuariosWebService_ChargeList_InputMessage">
     <wsdl:part name="parameters" element="tns:ChargeList" />
@@ -27,13 +27,13 @@
     <wsdl:part name="parameters" element="tns:ChargeListResponse" />
   </wsdl:message>
   <wsdl:portType name="IUsuariosWebService">
-    <wsdl:operation name="VerifyUsers">
-      <wsdl:input wsaw:Action="http://tempuri.org/IUsuariosWebService/VerifyUsers" message="tns:IUsuariosWebService_VerifyUsers_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IUsuariosWebService/VerifyUsersResponse" message="tns:IUsuariosWebService_VerifyUsers_OutputMessage" />
-    </wsdl:operation>
     <wsdl:operation name="NewUser">
       <wsdl:input wsaw:Action="http://tempuri.org/IUsuariosWebService/NewUser" message="tns:IUsuariosWebService_NewUser_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IUsuariosWebService/NewUserResponse" message="tns:IUsuariosWebService_NewUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerifyUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IUsuariosWebService/VerifyUsers" message="tns:IUsuariosWebService_VerifyUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IUsuariosWebService/VerifyUsersResponse" message="tns:IUsuariosWebService_VerifyUsers_OutputMessage" />
     </wsdl:operation>
     <wsdl:operation name="ChargeList">
       <wsdl:input wsaw:Action="http://tempuri.org/IUsuariosWebService/ChargeList" message="tns:IUsuariosWebService_ChargeList_InputMessage" />
@@ -42,8 +42,8 @@
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IUsuariosWebService" type="tns:IUsuariosWebService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="VerifyUsers">
-      <soap:operation soapAction="http://tempuri.org/IUsuariosWebService/VerifyUsers" style="document" />
+    <wsdl:operation name="NewUser">
+      <soap:operation soapAction="http://tempuri.org/IUsuariosWebService/NewUser" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -51,8 +51,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="NewUser">
-      <soap:operation soapAction="http://tempuri.org/IUsuariosWebService/NewUser" style="document" />
+    <wsdl:operation name="VerifyUsers">
+      <soap:operation soapAction="http://tempuri.org/IUsuariosWebService/VerifyUsers" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

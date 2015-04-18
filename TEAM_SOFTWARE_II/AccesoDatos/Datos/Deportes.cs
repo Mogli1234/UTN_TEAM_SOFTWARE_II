@@ -12,8 +12,8 @@ namespace AccesoDatos
 {
    public class Deportes
     {
-       UTN_SPORTS_ModelContainer modelo = new UTN_SPORTS_ModelContainer();
-       private bool estado = false;
+        UTN_SPORTS_ModelContainer modelo = new UTN_SPORTS_ModelContainer();
+        private bool estado = false;
        
 
         #region Metodo de insertar deportes
@@ -83,7 +83,7 @@ namespace AccesoDatos
        }
        #endregion
 
-       #region Charger Sport
+        #region Charger Sport
        public List<Sport> Charge_Sports() 
        {
            List<Sport> sportsList = new List<Sport>();

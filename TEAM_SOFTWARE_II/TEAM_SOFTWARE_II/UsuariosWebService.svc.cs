@@ -15,21 +15,21 @@ namespace TEAM_SOFTWARE_II
     // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione UsuariosWebService.svc o UsuariosWebService.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class UsuariosWebService : IUsuariosWebService
     {
-        Usuarios user = new Usuarios();
+        Usuarios oUser = new Usuarios();
 
         public int VerifyUsers(string username, string password)
         {
-            return user.is_Admin(username , password );
+            return oUser.is_Admin(username , password );
         }
 
-        public bool NewUser(user oUser)
+        public bool NewUser(user User)
         {
-            return user.InsertarUsuario(oUser);
+            return oUser.InsertarUsuario(User);
         }
 
         public List<String> ChargeList()
         {
-            return user.ChargerMailsList();
+            return oUser.ChargerMailsList();
         }
     }
 }
