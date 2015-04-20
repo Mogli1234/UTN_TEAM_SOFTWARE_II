@@ -28,10 +28,10 @@ namespace Project_View.ServicioUsuario {
         System.Threading.Tasks.Task<int> VerifyUsersAsync(string username, string password);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuariosWebService/ChargeList", ReplyAction="http://tempuri.org/IUsuariosWebService/ChargeListResponse")]
-        string[] ChargeList();
+        AccesoDatos.Entidades.User[] ChargeList();
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IUsuariosWebService/ChargeList", ReplyAction="http://tempuri.org/IUsuariosWebService/ChargeListResponse")]
-        System.Threading.Tasks.Task<string[]> ChargeListAsync();
+        System.Threading.Tasks.Task<AccesoDatos.Entidades.User[]> ChargeListAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -77,11 +77,11 @@ namespace Project_View.ServicioUsuario {
             return base.Channel.VerifyUsersAsync(username, password);
         }
         
-        public string[] ChargeList() {
+        public AccesoDatos.Entidades.User[] ChargeList() {
             return base.Channel.ChargeList();
         }
         
-        public System.Threading.Tasks.Task<string[]> ChargeListAsync() {
+        public System.Threading.Tasks.Task<AccesoDatos.Entidades.User[]> ChargeListAsync() {
             return base.Channel.ChargeListAsync();
         }
     }

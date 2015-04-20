@@ -218,6 +218,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\AccesoDatos.Entidades.User.datasource" />
     <None Include="Properties\DataSources\AccesoDatos.Entidades.Usuario.datasource" />
     <None Include="Properties\DataSources\AccesoDatos.Modelo.deporte.datasource" />
     <None Include="Properties\DataSources\AccesoDatos.Rutina.datasource" />
