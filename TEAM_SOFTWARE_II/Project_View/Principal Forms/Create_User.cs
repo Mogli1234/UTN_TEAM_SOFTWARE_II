@@ -27,7 +27,9 @@ namespace Project_View
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.Close();
+            frm_Login log = new frm_Login();
+            log.Show();
+            this.Hide();
         }
 
         private void btnCreate_Click(object sender, EventArgs e)
