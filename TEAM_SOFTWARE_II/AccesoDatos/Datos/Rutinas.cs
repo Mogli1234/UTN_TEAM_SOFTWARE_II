@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using AccesoDatos.Modelo;
@@ -29,15 +30,14 @@ namespace AccesoDatos
             }
             catch (Exception)
             {
-               // throw e;
-                return estado;
+                estado = false;
             }
             return estado;
         }
         #endregion
 
         #region Editar Una rutina
-        public Boolean Editarrutina(rutina oRutina)
+        public Boolean EditarRutina(rutina oRutina)
         {
             try
             {
@@ -47,8 +47,7 @@ namespace AccesoDatos
             }
             catch (Exception )
             {
-                
-                return estado;
+                 estado = false;
             }
             return estado;
         }
@@ -59,37 +58,42 @@ namespace AccesoDatos
         {
             try
             {
-                oRutinasContainer.rutinas.Remove(oRutina);
-            oRutinasContainer.SaveChanges();
+                var delRutina = (from r in oRutinasContainer.rutinas where r.id == oRutina.id select r).FirstOrDefault();
+                oRutinasContainer.rutinas.Remove(delRutina);
+                oRutinasContainer.SaveChanges();
                 estado = true;
             }
             catch (Exception)
             {
-
-                
-                return estado;
+                estado= false;
             }
             return estado;
         }
         #endregion
 
         #region Cargar lista con tabla de base datos
-        public List<Rutina> Charge_Sports()
+        public List<Rutina> Charge_Rutinas()
         {
             List<Rutina> listaRutinas = new List<Rutina>();
-            var queryAllRutinas = from rutin in oRutinasContainer.rutinas
-                                 select rutin;
-
-            foreach (var data in queryAllRutinas)
+            try
             {
-                listaRutinas.Add(new Rutina()
+                var queryAllRutinas = from rutin in oRutinasContainer.rutinas
+                    select rutin;
+
+                foreach (var data in queryAllRutinas)
                 {
-                    id = data.id,
-                    rutina = data.Rutina1
-                });
+                    listaRutinas.Add(new Rutina()
+                    {
+                        id = data.id,
+                        rutina = data.Rutina1
+                    });
+                }
+            }catch (Exception)
+            {
+                estado = false;
             }
             return listaRutinas;
-        }
+            }
         #endregion
     }
 }

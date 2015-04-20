@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ViewParticipantes));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_ViewParticipante));
             this.dtg_Participantes = new DevComponents.DotNetBar.Controls.DataGridViewX();
             this.btnAceptarSalir = new DevComponents.DotNetBar.ButtonX();
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Participantes)).BeginInit();
@@ -74,7 +74,7 @@
             this.btnAceptarSalir.Text = "Aceptar y Salir";
             this.btnAceptarSalir.Click += new System.EventHandler(this.btnAceptarSalir_Click);
             // 
-            // frm_ViewParticipantes
+            // frm_ViewParticipante
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -83,10 +83,10 @@
             this.Controls.Add(this.btnAceptarSalir);
             this.Controls.Add(this.dtg_Participantes);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frm_ViewParticipantes";
+            this.Name = "frm_ViewParticipante";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tabla de Participantes";
-            this.Load += new System.EventHandler(this.frm_ViewSport_Load);
+            this.Load += new System.EventHandler(this.frm_ViewParticipante_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtg_Participantes)).EndInit();
             this.ResumeLayout(false);
 

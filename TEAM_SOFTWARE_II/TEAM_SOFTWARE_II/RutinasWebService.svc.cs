@@ -21,10 +21,19 @@ namespace TEAM_SOFTWARE_II
             return oRutinas.InsertarRutina(rutinas);
         }
 
-        public bool EditarRutina(rutina oRutinas)
+        public bool EditarRutina(rutina oRutina)
         {
-            throw new NotImplementedException();
+            return oRutinas.EditarRutina(oRutina);
         }
 
+        public bool EliminarRutina(rutina oRutina)
+        {
+            return oRutinas.EliminarRutina(oRutina);
+        }
+
+        public List<Rutina> ChargerRutinas()
+        {
+            return oRutinas.Charge_Rutinas();
+        }
     }
 }

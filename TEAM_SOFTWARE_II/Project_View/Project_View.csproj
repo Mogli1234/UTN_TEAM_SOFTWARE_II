@@ -33,6 +33,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevComponents.DotNetBar2, Version=11.2.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
@@ -216,6 +220,7 @@
     </Compile>
     <None Include="Properties\DataSources\AccesoDatos.Entidades.Usuario.datasource" />
     <None Include="Properties\DataSources\AccesoDatos.Modelo.deporte.datasource" />
+    <None Include="Properties\DataSources\AccesoDatos.Rutina.datasource" />
     <None Include="Properties\DataSources\AccesoDatos.Sport.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -251,6 +256,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServicioRutina\RutinasWebService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioRutina\RutinasWebService3.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServicioUsuario\UsuariosWebService.wsdl" />
@@ -310,21 +318,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Service References\ServicioRutina\RutinasWebService.disco" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ServicioRutina\configuration91.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ServicioRutina\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\ServicioRutina\Reference.svcmap">
-      <Generator>WCF Proxy Generator</Generator>
-      <LastGenOutput>Reference.cs</LastGenOutput>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Service References\ServicioParticipante\ParticipantesWebService.disco" />
   </ItemGroup>
   <ItemGroup>
@@ -371,6 +364,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1395628423_new-mail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioRutina\RutinasWebService.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioRutina\configuration91.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioRutina\configuration.svcinfo" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\ServicioRutina\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

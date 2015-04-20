@@ -56,5 +56,10 @@ namespace Project_View
         {
 
         }
+
+        private void frm_Login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
