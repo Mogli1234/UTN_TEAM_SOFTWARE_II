@@ -87,17 +87,24 @@ namespace AccesoDatos
        public List<Sport> Charge_Sports() 
        {
            List<Sport> sportsList = new List<Sport>();
-           var queryAllSports = from sport in modelo.deportes
-                                select sport;
-
-           foreach (var data in queryAllSports.ToList())
+           try
            {
-               sportsList.Add(new Sport()
+               var queryAllSports = from sport in modelo.deportes
+                                    select sport;
+
+               foreach (var data in queryAllSports.ToList())
                {
-                   id = data.id,
-                   deporte = data.Deporte1,
-                   description = data.Descripcion
-               });
+                   sportsList.Add(new Sport()
+                   {
+                       id = data.id,
+                       deporte = data.Deporte1,
+                       description = data.Descripcion
+                   });
+               }
+           }
+           catch (Exception)
+           {   
+               throw;
            }
            return sportsList;
        }

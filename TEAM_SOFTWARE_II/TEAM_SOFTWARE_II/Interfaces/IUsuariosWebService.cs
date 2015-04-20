@@ -17,6 +17,6 @@ namespace TEAM_SOFTWARE_II.Interfaces
         int VerifyUsers(string username, string password);
 
         [OperationContract]
-        List<String> ChargeList();
+        List<User> ChargeList();
     }
 }

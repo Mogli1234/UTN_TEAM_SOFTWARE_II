@@ -27,7 +27,7 @@ namespace TEAM_SOFTWARE_II
             return oUser.InsertarUsuario(User);
         }
 
-        public List<String> ChargeList()
+        public List<User> ChargeList()
         {
             return oUser.ChargerMailsList();
         }

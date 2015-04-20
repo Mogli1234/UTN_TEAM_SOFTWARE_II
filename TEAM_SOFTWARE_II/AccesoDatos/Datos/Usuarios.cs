@@ -79,18 +79,24 @@ namespace AccesoDatos.Datos
         #endregion
 
         #region Charger emails from user not admin
-        public List<String>ChargerMailsList()
+        public List<User>ChargerMailsList()
         {
-            List<String> mailList = new List<String>();
+            List<User> mailList = new List<User>();
             try
             {
                 var queryList = from n in modelo.users
-                    where n.Role == 0
-                    select n.Email;
+                    select n;
 
                 foreach (var data in queryList.ToList())
                 {
-                    mailList.Add(data);
+                    mailList.Add(new User()
+                    {
+                      id = data.id,
+                      username = data.Username,
+                      password = data.Password,
+                      email = data.Email,
+                      role = data.Role
+                    });
                 }
             }
             catch (Exception)

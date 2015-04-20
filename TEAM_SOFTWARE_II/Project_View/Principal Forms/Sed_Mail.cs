@@ -23,20 +23,13 @@ namespace Project_View.Principal_Forms
 
         private void Sed_Mail_Load(object sender, EventArgs e)
         {
-           //this.chargerComponents();
+           this.chargerComponents();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        #region ChargerComponents
-        private void chargerComponents()
-        {
-           
-        }
-        #endregion
 
         private void btnSendMail_Click(object sender, EventArgs e)
         {
@@ -49,5 +42,14 @@ namespace Project_View.Principal_Forms
                 MessageBox.Show("Hubo un error a la hora de Enviar su correo", "FAILED!!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        #region ChargerComponents
+        private void chargerComponents()
+        {
+            cmbToEmail.DataSource = client.ChargeList();
+            cmbToEmail.DisplayMember = "email";
+            cmbToEmail.ValueMember = "id";
+        }
+        #endregion
     }
 }
