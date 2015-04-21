@@ -52,7 +52,7 @@ namespace Project_View
 
         private void Create_Routine_Load(object sender, EventArgs e)
         {
-
+            this.txtRutina.Focus();
         }
 
       

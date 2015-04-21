@@ -15,11 +15,29 @@ namespace Project_View.ServicioParticipante {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServicioParticipante.IParticipantesWebService")]
     public interface IParticipantesWebService {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IParticipantesWebService/DoWork", ReplyAction="http://tempuri.org/IParticipantesWebService/DoWorkResponse")]
-        void DoWork();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IParticipantesWebService/InsertarParticipante", ReplyAction="http://tempuri.org/IParticipantesWebService/InsertarParticipanteResponse")]
+        bool InsertarParticipante(AccesoDatos.Modelo.participante oParticipante);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IParticipantesWebService/DoWork", ReplyAction="http://tempuri.org/IParticipantesWebService/DoWorkResponse")]
-        System.Threading.Tasks.Task DoWorkAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IParticipantesWebService/InsertarParticipante", ReplyAction="http://tempuri.org/IParticipantesWebService/InsertarParticipanteResponse")]
+        System.Threading.Tasks.Task<bool> InsertarParticipanteAsync(AccesoDatos.Modelo.participante oParticipante);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IParticipantesWebService/EditarParticipante", ReplyAction="http://tempuri.org/IParticipantesWebService/EditarParticipanteResponse")]
+        bool EditarParticipante(AccesoDatos.Modelo.participante oParticipante);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IParticipantesWebService/EditarParticipante", ReplyAction="http://tempuri.org/IParticipantesWebService/EditarParticipanteResponse")]
+        System.Threading.Tasks.Task<bool> EditarParticipanteAsync(AccesoDatos.Modelo.participante oParticipante);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IParticipantesWebService/EliminarParticipante", ReplyAction="http://tempuri.org/IParticipantesWebService/EliminarParticipanteResponse")]
+        bool EliminarParticipante(AccesoDatos.Modelo.participante oParticipante);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IParticipantesWebService/EliminarParticipante", ReplyAction="http://tempuri.org/IParticipantesWebService/EliminarParticipanteResponse")]
+        System.Threading.Tasks.Task<bool> EliminarParticipanteAsync(AccesoDatos.Modelo.participante oParticipante);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IParticipantesWebService/ListadoParticipantes", ReplyAction="http://tempuri.org/IParticipantesWebService/ListadoParticipantesResponse")]
+        AccesoDatos.Modelo.participante[] ListadoParticipantes();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IParticipantesWebService/ListadoParticipantes", ReplyAction="http://tempuri.org/IParticipantesWebService/ListadoParticipantesResponse")]
+        System.Threading.Tasks.Task<AccesoDatos.Modelo.participante[]> ListadoParticipantesAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -49,12 +67,36 @@ namespace Project_View.ServicioParticipante {
                 base(binding, remoteAddress) {
         }
         
-        public void DoWork() {
-            base.Channel.DoWork();
+        public bool InsertarParticipante(AccesoDatos.Modelo.participante oParticipante) {
+            return base.Channel.InsertarParticipante(oParticipante);
         }
         
-        public System.Threading.Tasks.Task DoWorkAsync() {
-            return base.Channel.DoWorkAsync();
+        public System.Threading.Tasks.Task<bool> InsertarParticipanteAsync(AccesoDatos.Modelo.participante oParticipante) {
+            return base.Channel.InsertarParticipanteAsync(oParticipante);
+        }
+        
+        public bool EditarParticipante(AccesoDatos.Modelo.participante oParticipante) {
+            return base.Channel.EditarParticipante(oParticipante);
+        }
+        
+        public System.Threading.Tasks.Task<bool> EditarParticipanteAsync(AccesoDatos.Modelo.participante oParticipante) {
+            return base.Channel.EditarParticipanteAsync(oParticipante);
+        }
+        
+        public bool EliminarParticipante(AccesoDatos.Modelo.participante oParticipante) {
+            return base.Channel.EliminarParticipante(oParticipante);
+        }
+        
+        public System.Threading.Tasks.Task<bool> EliminarParticipanteAsync(AccesoDatos.Modelo.participante oParticipante) {
+            return base.Channel.EliminarParticipanteAsync(oParticipante);
+        }
+        
+        public AccesoDatos.Modelo.participante[] ListadoParticipantes() {
+            return base.Channel.ListadoParticipantes();
+        }
+        
+        public System.Threading.Tasks.Task<AccesoDatos.Modelo.participante[]> ListadoParticipantesAsync() {
+            return base.Channel.ListadoParticipantesAsync();
         }
     }
 }

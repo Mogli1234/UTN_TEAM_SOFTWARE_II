@@ -59,7 +59,7 @@
           <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="participante_id" Type="int" Nullable="false" />
           <Property Name="deporte_id" Type="int" Nullable="false" />
-          <Property Name="rutina_id" Type="int" Nullable="false" />
+          <Property Name="rutina_id" Type="int" Nullable="false" StoreGeneratedPattern="None" />
         </EntityType>
         <EntityType Name="rutina">
           <Key>
@@ -73,7 +73,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="rutina_id" Type="int" />
+          <Property Name="rutina_id" Type="int" StoreGeneratedPattern="None" />
           <Property Name="sport_id" Type="int" />
         </EntityType>
         <EntityType Name="users">
@@ -207,7 +207,7 @@
           <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="Int32" Name="participante_id" Nullable="false" />
           <Property Type="Int32" Name="deporte_id" Nullable="false" />
-          <Property Type="Int32" Name="rutina_id" Nullable="false" />
+          <Property Type="Int32" Name="rutina_id" Nullable="false" annotation:StoreGeneratedPattern="None" />
           <NavigationProperty Name="deporte" Relationship="UTN_SPORTS_Model.fk_deporte" FromRole="participante_deporte_rutina" ToRole="deporte" />
           <NavigationProperty Name="participante" Relationship="UTN_SPORTS_Model.fk_participante" FromRole="participante_deporte_rutina" ToRole="participante" />
           <NavigationProperty Name="rutina" Relationship="UTN_SPORTS_Model.fk_rutina" FromRole="participante_deporte_rutina" ToRole="rutina" />
@@ -226,7 +226,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Type="Int32" Name="id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Type="Int32" Name="rutina_id" />
+          <Property Type="Int32" Name="rutina_id" annotation:StoreGeneratedPattern="None" />
           <Property Type="Int32" Name="sport_id" />
           <NavigationProperty Name="deporte" Relationship="UTN_SPORTS_Model.fkSport" FromRole="rutinas_deportes" ToRole="deporte" />
           <NavigationProperty Name="rutina" Relationship="UTN_SPORTS_Model.fkRutina" FromRole="rutinas_deportes" ToRole="rutina" />

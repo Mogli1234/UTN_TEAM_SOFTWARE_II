@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.Entity.Migrations;
+using System.Data.Entity.ModelConfiguration;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using AccesoDatos.Modelo;
 using System.Windows;
+using System.Windows.Forms;
 using AccesoDatos.Entidades;
 
 namespace AccesoDatos
@@ -45,9 +48,9 @@ namespace AccesoDatos
                 oRutinasContainer.SaveChanges();
                 estado = true;
             }
-            catch (Exception )
+            catch (Exception)
             {
-                 estado = false;
+                estado = false;
             }
             return estado;
         }
@@ -58,14 +61,20 @@ namespace AccesoDatos
         {
             try
             {
-                var delRutina = (from r in oRutinasContainer.rutinas where r.id == oRutina.id select r).FirstOrDefault();
-                oRutinasContainer.rutinas.Remove(delRutina);
-                oRutinasContainer.SaveChanges();
-                estado = true;
+                if (oRutina != null)
+                {
+                    var delRutina = (from r in oRutinasContainer.rutinas where r.id == oRutina.id select r).FirstOrDefault();
+                    if (delRutina != null)
+                    {
+                        oRutinasContainer.rutinas.Remove(delRutina);
+                        oRutinasContainer.SaveChanges();
+                        estado = true;
+                    }
+                }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                estado= false;
+                MessageBox.Show(e.Message.ToString());
             }
             return estado;
         }
@@ -78,7 +87,7 @@ namespace AccesoDatos
             try
             {
                 var queryAllRutinas = from rutin in oRutinasContainer.rutinas
-                    select rutin;
+                                      select rutin;
 
                 foreach (var data in queryAllRutinas)
                 {
@@ -88,12 +97,13 @@ namespace AccesoDatos
                         rutina = data.Rutina1
                     });
                 }
-            }catch (Exception)
+            }
+            catch (Exception)
             {
                 estado = false;
             }
             return listaRutinas;
-            }
+        }
         #endregion
     }
 }

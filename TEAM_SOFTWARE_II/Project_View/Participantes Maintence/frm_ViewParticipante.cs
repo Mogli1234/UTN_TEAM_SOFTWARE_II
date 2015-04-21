@@ -7,16 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Project_View.ServicioParticipante;
 
 
 namespace Project_View
 {
-    public partial class frm_ViewParticipante: Form
+    public partial class frm_ViewParticipante : Form
     {
-        
+        private ServicioParticipante.ParticipantesWebServiceClient oServiceClient;
+
         public frm_ViewParticipante()
         {
             InitializeComponent();
+            oServiceClient = new ParticipantesWebServiceClient();
         }
 
         private void btnAceptarSalir_Click(object sender, EventArgs e)
@@ -26,6 +29,7 @@ namespace Project_View
 
         private void frm_ViewParticipante_Load(object sender, EventArgs e)
         {
+            dtg_Participantes.DataSource=oServiceClient.ListadoParticipantes();
             dtg_Participantes.Columns[0].Visible = false;
             dtg_Participantes.Columns[1].HeaderText = "Nombre";
             dtg_Participantes.Columns[2].HeaderText = "Primer Apellido";

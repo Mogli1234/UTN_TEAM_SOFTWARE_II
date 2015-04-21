@@ -1,4 +1,9 @@
-﻿using System.ServiceModel;
+﻿using System;
+using System.ServiceModel;
+using AccesoDatos;
+using System.Collections.Generic;
+using AccesoDatos.Modelo;
+
 
 namespace TEAM_SOFTWARE_II.Interfaces
 {
@@ -7,6 +12,12 @@ namespace TEAM_SOFTWARE_II.Interfaces
     public interface IParticipantesWebService
     {
         [OperationContract]
-        void DoWork();
+        Boolean InsertarParticipante(participante oParticipante);
+        [OperationContract]
+        Boolean EditarParticipante(participante oParticipante);
+        [OperationContract]
+        Boolean EliminarParticipante(participante oParticipante);
+        [OperationContract]
+        List<participante> ListadoParticipantes();
     }
 }

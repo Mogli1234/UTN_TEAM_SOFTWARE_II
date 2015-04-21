@@ -63,7 +63,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dtgEditRutinas.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgEditRutinas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(215)))), ((int)(((byte)(229)))));
-            this.dtgEditRutinas.Location = new System.Drawing.Point(393, 55);
+            this.dtgEditRutinas.Location = new System.Drawing.Point(395, 22);
             this.dtgEditRutinas.MultiSelect = false;
             this.dtgEditRutinas.Name = "dtgEditRutinas";
             this.dtgEditRutinas.ReadOnly = true;
@@ -71,6 +71,7 @@
             this.dtgEditRutinas.Size = new System.Drawing.Size(283, 162);
             this.dtgEditRutinas.TabIndex = 0;
             this.dtgEditRutinas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgEditRutinas_CellClick);
+            this.dtgEditRutinas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgEditRutinas_CellDoubleClick);
             // 
             // lblRutina
             // 
@@ -79,7 +80,7 @@
             // 
             this.lblRutina.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblRutina.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblRutina.Location = new System.Drawing.Point(12, 22);
+            this.lblRutina.Location = new System.Drawing.Point(12, 12);
             this.lblRutina.Name = "lblRutina";
             this.lblRutina.Size = new System.Drawing.Size(107, 27);
             this.lblRutina.TabIndex = 1;
@@ -92,7 +93,7 @@
             // 
             this.txtRutina.Border.Class = "TextBoxBorder";
             this.txtRutina.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.txtRutina.Location = new System.Drawing.Point(12, 55);
+            this.txtRutina.Location = new System.Drawing.Point(12, 45);
             this.txtRutina.Multiline = true;
             this.txtRutina.Name = "txtRutina";
             this.txtRutina.Size = new System.Drawing.Size(333, 93);
@@ -117,9 +118,11 @@
             // 
             this.btnSalir.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnSalir.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btnSalir.Location = new System.Drawing.Point(603, 254);
+            this.btnSalir.Image = global::Project_View.Properties.Resources._1395628811_cancel;
+            this.btnSalir.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
+            this.btnSalir.Location = new System.Drawing.Point(603, 198);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(75, 23);
+            this.btnSalir.Size = new System.Drawing.Size(75, 84);
             this.btnSalir.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnSalir.TabIndex = 4;
             this.btnSalir.Text = "Salir";

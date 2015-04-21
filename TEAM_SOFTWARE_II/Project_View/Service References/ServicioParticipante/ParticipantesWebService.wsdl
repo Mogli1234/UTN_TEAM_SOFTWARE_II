@@ -3,24 +3,83 @@
   <wsdl:types>
     <xsd:schema targetNamespace="http://tempuri.org/Imports">
       <xsd:import schemaLocation="http://localhost:7215/ParticipantesWebService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:7215/ParticipantesWebService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:7215/ParticipantesWebService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AccesoDatos.Modelo" />
     </xsd:schema>
   </wsdl:types>
-  <wsdl:message name="IParticipantesWebService_DoWork_InputMessage">
-    <wsdl:part name="parameters" element="tns:DoWork" />
+  <wsdl:message name="IParticipantesWebService_InsertarParticipante_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarParticipante" />
   </wsdl:message>
-  <wsdl:message name="IParticipantesWebService_DoWork_OutputMessage">
-    <wsdl:part name="parameters" element="tns:DoWorkResponse" />
+  <wsdl:message name="IParticipantesWebService_InsertarParticipante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertarParticipanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IParticipantesWebService_EditarParticipante_InputMessage">
+    <wsdl:part name="parameters" element="tns:EditarParticipante" />
+  </wsdl:message>
+  <wsdl:message name="IParticipantesWebService_EditarParticipante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EditarParticipanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IParticipantesWebService_EliminarParticipante_InputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarParticipante" />
+  </wsdl:message>
+  <wsdl:message name="IParticipantesWebService_EliminarParticipante_OutputMessage">
+    <wsdl:part name="parameters" element="tns:EliminarParticipanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="IParticipantesWebService_ListadoParticipantes_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListadoParticipantes" />
+  </wsdl:message>
+  <wsdl:message name="IParticipantesWebService_ListadoParticipantes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListadoParticipantesResponse" />
   </wsdl:message>
   <wsdl:portType name="IParticipantesWebService">
-    <wsdl:operation name="DoWork">
-      <wsdl:input wsaw:Action="http://tempuri.org/IParticipantesWebService/DoWork" message="tns:IParticipantesWebService_DoWork_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IParticipantesWebService/DoWorkResponse" message="tns:IParticipantesWebService_DoWork_OutputMessage" />
+    <wsdl:operation name="InsertarParticipante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IParticipantesWebService/InsertarParticipante" message="tns:IParticipantesWebService_InsertarParticipante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IParticipantesWebService/InsertarParticipanteResponse" message="tns:IParticipantesWebService_InsertarParticipante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EditarParticipante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IParticipantesWebService/EditarParticipante" message="tns:IParticipantesWebService_EditarParticipante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IParticipantesWebService/EditarParticipanteResponse" message="tns:IParticipantesWebService_EditarParticipante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarParticipante">
+      <wsdl:input wsaw:Action="http://tempuri.org/IParticipantesWebService/EliminarParticipante" message="tns:IParticipantesWebService_EliminarParticipante_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IParticipantesWebService/EliminarParticipanteResponse" message="tns:IParticipantesWebService_EliminarParticipante_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListadoParticipantes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IParticipantesWebService/ListadoParticipantes" message="tns:IParticipantesWebService_ListadoParticipantes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IParticipantesWebService/ListadoParticipantesResponse" message="tns:IParticipantesWebService_ListadoParticipantes_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IParticipantesWebService" type="tns:IParticipantesWebService">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="DoWork">
-      <soap:operation soapAction="http://tempuri.org/IParticipantesWebService/DoWork" style="document" />
+    <wsdl:operation name="InsertarParticipante">
+      <soap:operation soapAction="http://tempuri.org/IParticipantesWebService/InsertarParticipante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EditarParticipante">
+      <soap:operation soapAction="http://tempuri.org/IParticipantesWebService/EditarParticipante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarParticipante">
+      <soap:operation soapAction="http://tempuri.org/IParticipantesWebService/EliminarParticipante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListadoParticipantes">
+      <soap:operation soapAction="http://tempuri.org/IParticipantesWebService/ListadoParticipantes" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

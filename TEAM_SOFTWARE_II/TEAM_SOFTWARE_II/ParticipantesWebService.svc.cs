@@ -5,6 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.Text;
 using AccesoDatos;
+using AccesoDatos.Datos;
 using AccesoDatos.Modelo;
 using TEAM_SOFTWARE_II.Interfaces;
 
@@ -14,8 +15,26 @@ namespace TEAM_SOFTWARE_II
     // NOTA: para iniciar el Cliente de prueba WCF para probar este servicio, seleccione ParticipantesWebService.svc o ParticipantesWebService.svc.cs en el Explorador de soluciones e inicie la depuración.
     public class ParticipantesWebService : IParticipantesWebService
     {
-        public void DoWork()
+        private Participantes partis = new Participantes();
+
+        public bool InsertarParticipante(participante oParticipante)
         {
+            return partis.InsertarParticipante(oParticipante);
+        }
+
+        public bool EditarParticipante(participante oParticipante)
+        {
+            return partis.EditarParticipante(oParticipante);
+        }
+
+        public bool EliminarParticipante(participante oParticipante)
+        {
+            return partis.EliminarParticipante(oParticipante);
+        }
+
+        public List<participante> ListadoParticipantes()
+        {
+            return partis.CargarParticipantes();
         }
     }
 }

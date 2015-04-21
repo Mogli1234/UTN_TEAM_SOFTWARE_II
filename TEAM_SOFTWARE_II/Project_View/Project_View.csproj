@@ -137,11 +137,11 @@
     <Compile Include="Principal Forms\frm_Login.designer.cs">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Participantes Maintence\frm_PArticipante.cs">
+    <Compile Include="Participantes Maintence\frm_Participante.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Participantes Maintence\frm_PArticipante.designer.cs">
-      <DependentUpon>frm_PArticipante.cs</DependentUpon>
+    <Compile Include="Participantes Maintence\frm_Participante.designer.cs">
+      <DependentUpon>frm_Participante.cs</DependentUpon>
     </Compile>
     <Compile Include="Routine Maintence\frm_VerRutinas.cs">
       <SubType>Form</SubType>
@@ -196,8 +196,8 @@
     <EmbeddedResource Include="Principal Forms\frm_Login.resx">
       <DependentUpon>frm_Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Participantes Maintence\frm_PArticipante.resx">
-      <DependentUpon>frm_PArticipante.cs</DependentUpon>
+    <EmbeddedResource Include="Participantes Maintence\frm_Participante.resx">
+      <DependentUpon>frm_Participante.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Routine Maintence\frm_VerRutinas.resx">
       <DependentUpon>frm_VerRutinas.cs</DependentUpon>
@@ -221,6 +221,7 @@
     <None Include="Properties\DataSources\AccesoDatos.Entidades.User.datasource" />
     <None Include="Properties\DataSources\AccesoDatos.Entidades.Usuario.datasource" />
     <None Include="Properties\DataSources\AccesoDatos.Modelo.deporte.datasource" />
+    <None Include="Properties\DataSources\AccesoDatos.Modelo.participante.datasource" />
     <None Include="Properties\DataSources\AccesoDatos.Rutina.datasource" />
     <None Include="Properties\DataSources\AccesoDatos.Sport.datasource" />
     <None Include="Properties\Settings.settings">
@@ -247,6 +248,12 @@
     </None>
     <None Include="Service References\ServicioParticipante\ParticipantesWebService.wsdl" />
     <None Include="Service References\ServicioParticipante\ParticipantesWebService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioParticipante\ParticipantesWebService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioParticipante\ParticipantesWebService11.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServicioRutina\RutinasWebService.wsdl" />

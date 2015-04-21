@@ -15,7 +15,7 @@ namespace Project_View
 {
     public partial class frm_EditarRutinas : Form
     {
-        private ServicioRutina.RutinasClient oRutinasClient;
+        private RutinasClient oRutinasClient;
         private rutina oRutina;
 
         public frm_EditarRutinas()
@@ -27,48 +27,82 @@ namespace Project_View
 
         private void EditarRutinas_Load(object sender, EventArgs e)
         {
-            this.CargarRutina();
+            this.LimpiarObjetosFormulario();
+            this.CargarRutinas();
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            Main_Menu oMainMenu = new Main_Menu(1);
             this.Close();
+            oMainMenu.Focus();
+
         }
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
+            oRutina.Rutina1 = txtRutina.Text;
+            if (oRutinasClient.EditarRutina(oRutina))
+            {
+                MessageBox.Show("Actualizacion de Rutina Exitosa", "SUCESS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                MessageBox.Show("Error al intentar actualizar la informacion de la rutina seleccionada", "FAILED", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            this.LimpiarObjetosFormulario();
+            this.CargarRutinas();
+        }
 
-        }
-        #region Evento Click en una celda del dtgEditRutinas
-        private void dtgEditRutinas_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            oRutina.id = Convert.ToInt32(dtgEditRutinas.Rows[e.RowIndex].Cells[0].Value);
-            oRutina.Rutina1 = dtgEditRutinas.Rows[e.RowIndex].Cells[1].Value.ToString();
-        }
-        #endregion
+
 
         #region Accion de btnEliminar
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (oRutinasClient.EliminarRutina((oRutina)))
+            if (oRutinasClient.EliminarRutina(oRutina))
             {
                 MessageBox.Show("Se ha eliminado la rutina exitosamente", "SUCESS", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
             else
             {
-                MessageBox.Show("Error al intentar eliminar la rutina seleccionada", "", MessageBoxButtons.OK,
+                MessageBox.Show("Error al intentar eliminar la rutina seleccionada", "FAILED", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
             }
-            this.CargarRutina();
+            this.CargarRutinas();
+            this.LimpiarObjetosFormulario();
+
         }
         #endregion
 
-        private void CargarRutina()
+        #region Funciones basicas de limpieza y visual
+        private void CargarRutinas()
         {
             dtgEditRutinas.DataSource = oRutinasClient.ChargerRutinas();
             dtgEditRutinas.Columns[0].Visible = false;
             dtgEditRutinas.Columns[1].HeaderText = "Detalle de Rutina";
+
         }
+
+        public void LimpiarObjetosFormulario()
+        {
+            txtRutina.Clear();
+            txtRutina.Enabled = false;
+        }
+        #endregion
+
+        #region Eventos Click y DobleClick en una celda del dtgEditRutinas
+        private void dtgEditRutinas_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            oRutina.id = Convert.ToInt32(dtgEditRutinas.Rows[e.RowIndex].Cells[0].Value);
+            oRutina.Rutina1 = dtgEditRutinas.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
+        private void dtgEditRutinas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtRutina.Text = dtgEditRutinas.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txtRutina.Enabled = true;
+        }
+        #endregion
     }
 }
