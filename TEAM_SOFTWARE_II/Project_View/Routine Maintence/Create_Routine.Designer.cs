@@ -81,9 +81,9 @@
             this.lblRutina.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.lblRutina.Location = new System.Drawing.Point(12, 49);
             this.lblRutina.Name = "lblRutina";
-            this.lblRutina.Size = new System.Drawing.Size(95, 34);
+            this.lblRutina.Size = new System.Drawing.Size(130, 34);
             this.lblRutina.TabIndex = 3;
-            this.lblRutina.Text = "Rutina Nombre:";
+            this.lblRutina.Text = "Descripcion de la Rutina: ";
             this.lblRutina.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
             // Create_Routine

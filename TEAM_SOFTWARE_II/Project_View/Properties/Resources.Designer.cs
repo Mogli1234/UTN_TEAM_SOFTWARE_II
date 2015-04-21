@@ -63,16 +63,6 @@ namespace Project_View.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _02_nobm9_AnimeAngel1 {
-            get {
-                object obj = ResourceManager.GetObject("02-nobm9_AnimeAngel1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap _1395628150_add_user {
             get {
                 object obj = ResourceManager.GetObject("1395628150_add-user", resourceCulture);
@@ -146,6 +136,16 @@ namespace Project_View.Properties {
         internal static System.Drawing.Bitmap _1395628811_cancel {
             get {
                 object obj = ResourceManager.GetObject("1395628811_cancel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap impact_enviroment_sport {
+            get {
+                object obj = ResourceManager.GetObject("impact_enviroment_sport", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

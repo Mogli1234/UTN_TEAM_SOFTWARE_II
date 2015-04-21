@@ -111,7 +111,6 @@
             this.btnEditar.Size = new System.Drawing.Size(75, 84);
             this.btnEditar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnEditar.TabIndex = 3;
-            this.btnEditar.Text = "Editar";
             this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
             // 
             // btnSalir
@@ -120,12 +119,11 @@
             this.btnSalir.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnSalir.Image = global::Project_View.Properties.Resources._1395628811_cancel;
             this.btnSalir.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnSalir.Location = new System.Drawing.Point(603, 198);
+            this.btnSalir.Location = new System.Drawing.Point(603, 193);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 84);
             this.btnSalir.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnSalir.TabIndex = 4;
-            this.btnSalir.Text = "Salir";
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnEliminar
@@ -135,12 +133,11 @@
             this.btnEliminar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
             this.btnEliminar.Image = global::Project_View.Properties.Resources._1395628427_delete1;
             this.btnEliminar.ImagePosition = DevComponents.DotNetBar.eImagePosition.Top;
-            this.btnEliminar.Location = new System.Drawing.Point(126, 193);
+            this.btnEliminar.Location = new System.Drawing.Point(165, 193);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(75, 84);
             this.btnEliminar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btnEliminar.TabIndex = 5;
-            this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // frm_EditarRutinas

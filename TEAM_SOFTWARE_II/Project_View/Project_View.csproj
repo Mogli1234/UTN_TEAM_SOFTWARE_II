@@ -299,9 +299,6 @@
     <None Include="Resources\1395628239_save.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\02-nobm9_AnimeAngel1.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\1395628150_add-user.png" />
   </ItemGroup>
   <ItemGroup>
@@ -387,6 +384,9 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\impact_enviroment_sport.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

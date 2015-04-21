@@ -118,9 +118,6 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="02-nobm9_AnimeAngel1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\02-nobm9_AnimeAngel1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="1395628413_info-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1395628413_info-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -136,13 +133,16 @@
   <data name="1395628811_cancel" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1395628811_cancel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="1395628423_new-mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1395628423_new-mail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1395628632_edit-user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1395628632_edit-user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1395628427_delete1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1395628427_delete1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1395628423_new-mail" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1395628423_new-mail.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="impact_enviroment_sport" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\impact_enviroment_sport.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
