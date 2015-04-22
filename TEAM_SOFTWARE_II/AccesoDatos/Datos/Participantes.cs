@@ -83,8 +83,7 @@ namespace AccesoDatos.Datos
         #endregion
 
         #region Crear lista con participantes
-
-        public List<participante> CargarParticipantes()
+        public List<participante>CargarParticipantes()
         {
             List<participante> oList = new List<participante>();
             try
@@ -114,5 +113,7 @@ namespace AccesoDatos.Datos
             return oList;
         }
         #endregion
+
+
     }
 }

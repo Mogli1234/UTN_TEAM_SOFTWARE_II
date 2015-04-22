@@ -35,5 +35,15 @@ namespace TEAM_SOFTWARE_II
         {
             return oRutinas.Charge_Rutinas();
         }
+
+        public bool CreateMultiRelation(participante_deporte_rutina oRelation)
+        {
+            return oRutinas.Assign_Sport_runtine_to_Participant(oRelation);
+        }
+
+        public bool CreateRelation(rutinas_deportes oRelational)
+        {
+            return oRutinas.Create_Relational_Sport_with_Runtine(oRelational);
+        }
     }
 }

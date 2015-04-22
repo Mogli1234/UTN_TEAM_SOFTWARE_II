@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="a0063eab-4341-4e78-8069-fd4b9f1d9f2c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="28f6f3f4-3f89-4daa-a456-e917ad1698cc" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,12 +22,12 @@
     <MetadataSource Address="http://localhost:7215/RutinasWebService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="RutinasWebService.xsd" MetadataType="Schema" ID="37195c78-f05a-4015-922e-ef3dbc0254e0" SourceId="1" SourceUrl="http://localhost:7215/RutinasWebService.svc?xsd=xsd3" />
-    <MetadataFile FileName="RutinasWebService.disco" MetadataType="Disco" ID="77d352bf-3ba3-4be4-bc02-f75d7c8df28e" SourceId="1" SourceUrl="http://localhost:7215/RutinasWebService.svc?disco" />
-    <MetadataFile FileName="RutinasWebService1.xsd" MetadataType="Schema" ID="bd4464d8-3f29-402b-b81b-ffb5b42cc547" SourceId="1" SourceUrl="http://localhost:7215/RutinasWebService.svc?xsd=xsd0" />
-    <MetadataFile FileName="RutinasWebService.wsdl" MetadataType="Wsdl" ID="2d57c423-20c1-4e90-9f28-5b8f2bb0d3a6" SourceId="1" SourceUrl="http://localhost:7215/RutinasWebService.svc?wsdl" />
-    <MetadataFile FileName="RutinasWebService2.xsd" MetadataType="Schema" ID="b211799c-905d-4a1d-9eca-683b56b9559c" SourceId="1" SourceUrl="http://localhost:7215/RutinasWebService.svc?xsd=xsd2" />
-    <MetadataFile FileName="RutinasWebService3.xsd" MetadataType="Schema" ID="36185203-0c34-4147-afcc-7d08d5cb19e1" SourceId="1" SourceUrl="http://localhost:7215/RutinasWebService.svc?xsd=xsd1" />
+    <MetadataFile FileName="RutinasWebService.xsd" MetadataType="Schema" ID="45eaad14-7dda-4f9e-9aa4-0c0998c87b4f" SourceId="1" SourceUrl="http://localhost:7215/RutinasWebService.svc?xsd=xsd3" />
+    <MetadataFile FileName="RutinasWebService.disco" MetadataType="Disco" ID="97250cc3-79f7-4896-ba1f-ff47d2b2204b" SourceId="1" SourceUrl="http://localhost:7215/RutinasWebService.svc?disco" />
+    <MetadataFile FileName="RutinasWebService1.xsd" MetadataType="Schema" ID="730484b7-0582-4c0f-9f4e-ffe0d65fb782" SourceId="1" SourceUrl="http://localhost:7215/RutinasWebService.svc?xsd=xsd0" />
+    <MetadataFile FileName="RutinasWebService.wsdl" MetadataType="Wsdl" ID="f504198d-f7d0-463a-a83d-472491ee877f" SourceId="1" SourceUrl="http://localhost:7215/RutinasWebService.svc?wsdl" />
+    <MetadataFile FileName="RutinasWebService2.xsd" MetadataType="Schema" ID="3325bb60-4c73-4366-add7-9868ab43bda5" SourceId="1" SourceUrl="http://localhost:7215/RutinasWebService.svc?xsd=xsd2" />
+    <MetadataFile FileName="RutinasWebService3.xsd" MetadataType="Schema" ID="f8cbcf24-f344-4234-ae79-3270fa2f9d10" SourceId="1" SourceUrl="http://localhost:7215/RutinasWebService.svc?xsd=xsd1" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

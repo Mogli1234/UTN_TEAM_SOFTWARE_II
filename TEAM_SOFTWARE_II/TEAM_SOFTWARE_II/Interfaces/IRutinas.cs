@@ -25,5 +25,11 @@ namespace TEAM_SOFTWARE_II.Interfaces
 
         [OperationContract]
         List<Rutina> ChargerRutinas();
+
+        [OperationContract]
+        Boolean CreateMultiRelation(participante_deporte_rutina oRelation);
+
+        [OperationContract]
+        Boolean CreateRelation(rutinas_deportes oRelational);
     }
 }

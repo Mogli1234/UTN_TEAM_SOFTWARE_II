@@ -105,5 +105,43 @@ namespace AccesoDatos
             return listaRutinas;
         }
         #endregion
+
+        #region Create New_Relation_Sport_Runtine_Participant
+        public Boolean Assign_Sport_runtine_to_Participant(participante_deporte_rutina oRelational){
+            try
+            {
+                if (oRelational!=null)
+                {
+                    oRutinasContainer.participante_deporte_rutina.Add(oRelational);
+                    oRutinasContainer.SaveChanges();
+                    estado = true;
+                }
+            }
+            catch (Exception)
+            {
+                estado = false;
+            }
+            return estado;
+        }
+        #endregion
+
+        #region Create New_Relation_Sport_Runtine
+        public Boolean Create_Relational_Sport_with_Runtine(rutinas_deportes oRelational){
+            try
+            {
+                if (oRelational!=null)
+                {
+                    oRutinasContainer.rutinas_deportes.Add(oRelational);
+                    oRutinasContainer.SaveChanges();
+                    estado = true;
+                }
+            }
+            catch (Exception)
+            {
+                estado = false;
+            }
+            return estado;
+        }
+        #endregion
     }
 }

@@ -32,6 +32,18 @@
   <wsdl:message name="IRutinas_ChargerRutinas_OutputMessage">
     <wsdl:part name="parameters" element="tns:ChargerRutinasResponse" />
   </wsdl:message>
+  <wsdl:message name="IRutinas_CreateMultiRelation_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMultiRelation" />
+  </wsdl:message>
+  <wsdl:message name="IRutinas_CreateMultiRelation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateMultiRelationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRutinas_CreateRelation_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRelation" />
+  </wsdl:message>
+  <wsdl:message name="IRutinas_CreateRelation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateRelationResponse" />
+  </wsdl:message>
   <wsdl:portType name="IRutinas">
     <wsdl:operation name="CrearRutina">
       <wsdl:input wsaw:Action="http://tempuri.org/IRutinas/CrearRutina" message="tns:IRutinas_CrearRutina_InputMessage" />
@@ -48,6 +60,14 @@
     <wsdl:operation name="ChargerRutinas">
       <wsdl:input wsaw:Action="http://tempuri.org/IRutinas/ChargerRutinas" message="tns:IRutinas_ChargerRutinas_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IRutinas/ChargerRutinasResponse" message="tns:IRutinas_ChargerRutinas_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMultiRelation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRutinas/CreateMultiRelation" message="tns:IRutinas_CreateMultiRelation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRutinas/CreateMultiRelationResponse" message="tns:IRutinas_CreateMultiRelation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateRelation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IRutinas/CreateRelation" message="tns:IRutinas_CreateRelation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IRutinas/CreateRelationResponse" message="tns:IRutinas_CreateRelation_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IRutinas" type="tns:IRutinas">
@@ -81,6 +101,24 @@
     </wsdl:operation>
     <wsdl:operation name="ChargerRutinas">
       <soap:operation soapAction="http://tempuri.org/IRutinas/ChargerRutinas" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMultiRelation">
+      <soap:operation soapAction="http://tempuri.org/IRutinas/CreateMultiRelation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateRelation">
+      <soap:operation soapAction="http://tempuri.org/IRutinas/CreateRelation" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
