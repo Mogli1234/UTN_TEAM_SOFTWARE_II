@@ -238,8 +238,8 @@
             // btnAssigSport
             // 
             this.btnAssigSport.Name = "btnAssigSport";
-            this.btnAssigSport.Size = new System.Drawing.Size(164, 22);
-            this.btnAssigSport.Text = "Assignar Deporte";
+            this.btnAssigSport.Size = new System.Drawing.Size(159, 22);
+            this.btnAssigSport.Text = "Asignar Deporte";
             this.btnAssigSport.Click += new System.EventHandler(this.btnAssigSport_Click);
             // 
             // btnStats
