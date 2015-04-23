@@ -13,10 +13,13 @@ namespace TEAM_SOFTWARE_II.Interfaces
     {
         [OperationContract]
         Boolean InsertarParticipante(participante oParticipante);
+
         [OperationContract]
         Boolean EditarParticipante(participante oParticipante);
+
         [OperationContract]
         Boolean EliminarParticipante(participante oParticipante);
+
         [OperationContract]
         List<participante> ListadoParticipantes();
     }

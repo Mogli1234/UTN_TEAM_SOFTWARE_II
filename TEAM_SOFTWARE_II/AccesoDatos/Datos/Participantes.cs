@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,7 +48,7 @@ namespace AccesoDatos.Datos
             {
                 if (oParticipante != null)
                 {
-                    oModelContainer.participantes.Add(oParticipante);
+                    oModelContainer.participantes.AddOrUpdate(oParticipante);
                     oModelContainer.SaveChanges();
                     estado = true;
                 }
@@ -68,14 +69,17 @@ namespace AccesoDatos.Datos
             {
                 if (oParticipante != null)
                 {
-                    oModelContainer.participantes.Add(oParticipante);
-                    oModelContainer.SaveChanges();
-                    estado = true;
+                    var elimParti = (from p in oModelContainer.participantes where p.id == oParticipante.id select p).FirstOrDefault();
+                    if (elimParti != null)
+                    {
+                        oModelContainer.participantes.Remove(elimParti);
+                        oModelContainer.SaveChanges();
+                        estado = true;
+                    }
                 }
             }
             catch (Exception e)
             {
-
                 MessageBox.Show(e.Message.ToString());
             }
             return estado;

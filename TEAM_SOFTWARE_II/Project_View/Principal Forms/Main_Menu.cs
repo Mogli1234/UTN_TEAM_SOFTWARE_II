@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AccesoDatos.Entidades;
+using Project_View.Participantes_Maintence;
 using Project_View.Principal_Forms;
 
 namespace Project_View
@@ -99,7 +100,7 @@ namespace Project_View
 
         private void participanteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frm_Participante oPartic = new frm_Participante();
+            frm_EditarParticipante oPartic = new frm_EditarParticipante();
             oPartic.ShowDialog();
         }
 

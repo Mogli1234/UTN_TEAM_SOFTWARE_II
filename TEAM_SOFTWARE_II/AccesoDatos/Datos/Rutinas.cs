@@ -48,7 +48,7 @@ namespace AccesoDatos
                 oRutinasContainer.SaveChanges();
                 estado = true;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 estado = false;
             }

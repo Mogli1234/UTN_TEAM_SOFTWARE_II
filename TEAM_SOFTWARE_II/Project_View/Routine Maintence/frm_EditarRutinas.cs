@@ -67,7 +67,7 @@ namespace Project_View
             else
             {
                 MessageBox.Show("Error al intentar eliminar la rutina seleccionada", "FAILED", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                    MessageBoxIcon.Error);
             }
             this.CargarRutinas();
             this.LimpiarObjetosFormulario();
