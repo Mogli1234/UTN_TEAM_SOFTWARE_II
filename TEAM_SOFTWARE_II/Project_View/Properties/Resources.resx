@@ -145,4 +145,7 @@
   <data name="impact_enviroment_sport" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\impact_enviroment_sport.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ea-sports-logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ea-sports-logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>

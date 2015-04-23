@@ -143,6 +143,16 @@ namespace Project_View.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap ea_sports_logo {
+            get {
+                object obj = ResourceManager.GetObject("ea-sports-logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap impact_enviroment_sport {
             get {
                 object obj = ResourceManager.GetObject("impact_enviroment_sport", resourceCulture);
