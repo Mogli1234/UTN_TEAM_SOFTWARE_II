@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:import schemaLocation="http://localhost:7215/ParticipantesWebService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/AccesoDatos.Modelo" />
+  <xs:import schemaLocation="http://localhost:7215/ParticipantesWebService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/AccesoDatos.Entidades" />
   <xs:element name="InsertarParticipante">
     <xs:complexType>
       <xs:sequence>
@@ -52,6 +53,20 @@
     <xs:complexType>
       <xs:sequence>
         <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/AccesoDatos.Modelo" minOccurs="0" name="ListadoParticipantesResult" nillable="true" type="q4:ArrayOfparticipante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FiltList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/AccesoDatos.Entidades" minOccurs="0" name="oparti" nillable="true" type="q5:Participante" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FiltListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/AccesoDatos.Entidades" minOccurs="0" name="FiltListResult" nillable="true" type="q6:ArrayOfParticipante" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

@@ -37,8 +37,8 @@ namespace Project_View
         {
             //Cargo los deportes
             cmbSport.DataSource = oSportClient.ChargeSportsList();
-            cmbSport.ValueMember = "id";
             cmbSport.DisplayMember = "Deporte";
+            cmbSport.ValueMember = "id";
 
             //Cargo las rutinas en este 
             cmbRutine.DataSource = oRutinasClient.ChargerRutinas();
@@ -49,8 +49,8 @@ namespace Project_View
 
         private void btnSave_Click(object sender, EventArgs e)
         {
-            rd.rutina_id = (int)cmbRutine.SelectedValue;
-            rd.sport_id = (int)cmbSport.SelectedValue;
+            rd.rutina_id = (int?)cmbRutine.SelectedValue;
+            rd.sport_id = (int?)cmbSport.SelectedValue;
             if (oRutinasClient.CreateRelation(rd))
             {
                 MessageBox.Show("Se ha agregado correctamente", "SUCESS", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);

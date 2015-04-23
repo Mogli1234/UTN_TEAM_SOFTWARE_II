@@ -118,6 +118,35 @@ namespace AccesoDatos.Datos
         }
         #endregion
 
+        #region Filtro Nombre
+        public List<Participante> FiltroList(Participante variable)
+        {
+            List<Participante> listParticipantes = new List<Participante>();
+            try
+            {
+                var queryList = (from key in oModelContainer.participantes
+                    where key.Nombre.Contains(variable.Nombre)
+                    select key);
 
+                foreach (var data in queryList.ToList())
+                {
+                    listParticipantes.Add(new Participante
+                    {
+                     id   = data.id,
+                     Edad = data.Edad,
+                     Nombre = data.Nombre,
+                     Primer_Apellido = data.Primer_Apellido,
+                     Segundo_Apellido =  data.Segundo_Apellido,
+                     Fecha_Ingreso = data.Fecha_Ingreso 
+                    });
+                }
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            return listParticipantes;
+        } 
+        #endregion
     }
 }

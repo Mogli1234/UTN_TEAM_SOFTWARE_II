@@ -6,6 +6,7 @@ using System.ServiceModel;
 using System.Text;
 using AccesoDatos;
 using AccesoDatos.Datos;
+using AccesoDatos.Entidades;
 using AccesoDatos.Modelo;
 using TEAM_SOFTWARE_II.Interfaces;
 
@@ -35,6 +36,11 @@ namespace TEAM_SOFTWARE_II
         public List<participante> ListadoParticipantes()
         {
             return partis.CargarParticipantes();
+        }
+
+        public List<Participante> FiltList(Participante oparti)
+        {
+            return FiltList(oparti);
         }
     }
 }

@@ -2,6 +2,7 @@
 using System.ServiceModel;
 using AccesoDatos;
 using System.Collections.Generic;
+using AccesoDatos.Entidades;
 using AccesoDatos.Modelo;
 
 
@@ -22,5 +23,8 @@ namespace TEAM_SOFTWARE_II.Interfaces
 
         [OperationContract]
         List<participante> ListadoParticipantes();
+
+        [OperationContract]
+        List<Participante> FiltList(Participante oparti);
     }
 }

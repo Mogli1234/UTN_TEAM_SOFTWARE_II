@@ -59,7 +59,7 @@
           <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="participante_id" Type="int" Nullable="false" />
           <Property Name="deporte_id" Type="int" Nullable="false" />
-          <Property Name="rutina_id" Type="int" Nullable="false" StoreGeneratedPattern="None" />
+          <Property Name="rutina_id" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="rutina">
           <Key>
@@ -73,7 +73,7 @@
             <PropertyRef Name="id" />
           </Key>
           <Property Name="id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-          <Property Name="rutina_id" Type="int" StoreGeneratedPattern="None" />
+          <Property Name="rutina_id" Type="int" />
           <Property Name="sport_id" Type="int" />
         </EntityType>
         <EntityType Name="users">

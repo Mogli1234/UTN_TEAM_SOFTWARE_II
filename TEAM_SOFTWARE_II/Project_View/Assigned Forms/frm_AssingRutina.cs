@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AccesoDatos.Entidades;
 using AccesoDatos.Modelo;
 using Project_View.ServicioDeporte;
 using Project_View.ServicioParticipante;
@@ -21,6 +22,7 @@ namespace Project_View
         ServicioRutina.RutinasClient oRutinasClient = new RutinasClient();
         ServicioParticipante.ParticipantesWebServiceClient oParticipanteClient = new ParticipantesWebServiceClient();
         participante_deporte_rutina part = new participante_deporte_rutina();
+        Participante parti = new Participante();
         public frm_AssingRutina()
         {
             InitializeComponent();
@@ -64,7 +66,8 @@ namespace Project_View
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            
+            parti.Nombre = txtNombre.Text;
+            dtgParticipantes.DataSource = oParticipanteClient.FiltList(parti);
             dtgParticipantes.Columns[0].Visible = true;
             dtgParticipantes.Columns[1].HeaderText = "Nombre";
             dtgParticipantes.Columns[2].HeaderText = "Primer Apellido";

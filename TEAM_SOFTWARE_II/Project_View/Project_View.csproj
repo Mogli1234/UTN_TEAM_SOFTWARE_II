@@ -228,6 +228,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="Properties\DataSources\AccesoDatos.Entidades.Participante.datasource" />
     <None Include="Properties\DataSources\AccesoDatos.Entidades.User.datasource" />
     <None Include="Properties\DataSources\AccesoDatos.Entidades.Usuario.datasource" />
     <None Include="Properties\DataSources\AccesoDatos.Modelo.deporte.datasource" />
@@ -264,6 +265,9 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServicioParticipante\ParticipantesWebService11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServicioParticipante\ParticipantesWebService2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServicioRutina\RutinasWebService.wsdl" />

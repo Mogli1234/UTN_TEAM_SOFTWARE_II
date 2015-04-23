@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/AccesoDatos.Entidades" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/AccesoDatos.Entidades" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Participante">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Edad" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Fecha_Ingreso" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Nombre" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Primer_Apellido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Segundo_Apellido" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="id" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Participante" nillable="true" type="tns:Participante" />
+  <xs:complexType name="ArrayOfParticipante">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Participante" nillable="true" type="tns:Participante" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfParticipante" nillable="true" type="tns:ArrayOfParticipante" />
+</xs:schema>

@@ -22,11 +22,12 @@
     <MetadataSource Address="http://localhost:7215/ParticipantesWebService.svc" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
+    <MetadataFile FileName="ParticipantesWebService.disco" MetadataType="Disco" ID="a544f700-af49-48c8-9515-170c1249f00b" SourceId="1" SourceUrl="http://localhost:7215/ParticipantesWebService.svc?disco" />
     <MetadataFile FileName="ParticipantesWebService1.xsd" MetadataType="Schema" ID="098e2496-1a39-46db-8f5e-5fad1d6cdb7a" SourceId="1" SourceUrl="http://localhost:7215/ParticipantesWebService.svc?xsd=xsd1" />
     <MetadataFile FileName="ParticipantesWebService.xsd" MetadataType="Schema" ID="39e48c8c-5a3c-4fca-8224-e85afb549169" SourceId="1" SourceUrl="http://localhost:7215/ParticipantesWebService.svc?xsd=xsd0" />
-    <MetadataFile FileName="ParticipantesWebService.disco" MetadataType="Disco" ID="a544f700-af49-48c8-9515-170c1249f00b" SourceId="1" SourceUrl="http://localhost:7215/ParticipantesWebService.svc?disco" />
-    <MetadataFile FileName="ParticipantesWebService.wsdl" MetadataType="Wsdl" ID="964b3225-9a05-42bc-af18-b57b8c67ebab" SourceId="1" SourceUrl="http://localhost:7215/ParticipantesWebService.svc?wsdl" />
+    <MetadataFile FileName="ParticipantesWebService2.xsd" MetadataType="Schema" ID="3f11858d-89ed-44a8-ae76-528f79a3888f" SourceId="1" SourceUrl="http://localhost:7215/ParticipantesWebService.svc?xsd=xsd3" />
     <MetadataFile FileName="ParticipantesWebService11.xsd" MetadataType="Schema" ID="6709d8c9-fdd3-42bc-aa42-747e56115cf0" SourceId="1" SourceUrl="http://localhost:7215/ParticipantesWebService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ParticipantesWebService.wsdl" MetadataType="Wsdl" ID="964b3225-9a05-42bc-af18-b57b8c67ebab" SourceId="1" SourceUrl="http://localhost:7215/ParticipantesWebService.svc?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
