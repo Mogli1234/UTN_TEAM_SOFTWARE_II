@@ -18,14 +18,12 @@ namespace Project_View.Participantes_Maintence
     {
         private ServicioParticipante.ParticipantesWebServiceClient oServiceClient;
         private participante oParticipante;
-        private int edad;
         private DateTime fechaActual;
         public frm_EditarParticipante()
         {
             InitializeComponent();
             oServiceClient= new ParticipantesWebServiceClient();
             oParticipante= new participante();
-            edad = 0;
             fechaActual = DateTime.Now;
         }
 

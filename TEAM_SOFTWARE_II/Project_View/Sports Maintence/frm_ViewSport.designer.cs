@@ -66,24 +66,24 @@
             // 
             this.btn_Cancelar.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btn_Cancelar.ColorTable = DevComponents.DotNetBar.eButtonColor.OrangeWithBackground;
-            this.btn_Cancelar.Location = new System.Drawing.Point(275, 282);
+            this.btn_Cancelar.Image = global::Project_View.Properties.Resources._1395628811_cancel;
+            this.btn_Cancelar.Location = new System.Drawing.Point(275, 267);
             this.btn_Cancelar.Name = "btn_Cancelar";
-            this.btn_Cancelar.Size = new System.Drawing.Size(75, 23);
+            this.btn_Cancelar.Size = new System.Drawing.Size(75, 59);
             this.btn_Cancelar.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.btn_Cancelar.TabIndex = 1;
-            this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
-            // frm_ViewSport
+            // frm_ViewParticipantes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(710, 331);
             this.Controls.Add(this.btn_Cancelar);
-            this.Controls.Add(this.dtg_sport);      
+            this.Controls.Add(this.dtg_sport);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "frm_ViewSport";
+            this.Name = "frm_ViewParticipantes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Listado de Deportes";
             this.Load += new System.EventHandler(this.frm_ViewSport_Load);

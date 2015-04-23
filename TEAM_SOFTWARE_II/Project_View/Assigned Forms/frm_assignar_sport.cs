@@ -15,7 +15,7 @@ namespace Project_View
     public partial class frm_assignar_sport : Form
     {
         private ServicioDeporte.DeportesWebServiceClient oSportClient = new ServicioDeporte.DeportesWebServiceClient();
-        private  ServicioRutina.RutinasClient oRutinasClient = new RutinasClient();
+        private  ServicioRutina.RutinasClient oRutinasClient = new ServicioRutina.RutinasClient();
         rutinas_deportes rd = new rutinas_deportes();
         public frm_assignar_sport()
         {
