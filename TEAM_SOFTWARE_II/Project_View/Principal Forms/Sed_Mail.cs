@@ -33,7 +33,7 @@ namespace Project_View.Principal_Forms
 
         private void btnSendMail_Click(object sender, EventArgs e)
         {
-            if (mail.email_send(txtFromMail.Text,cmbToEmail.SelectedItem.ToString(),txtSubjectMail.Text,txtBodyMail.Text))
+            if (mail.email_send(txtFromMail.Text,cmbToEmail.Text,txtSubjectMail.Text,txtBodyMail.Text))
             {
                 MessageBox.Show("Se logro enviar correctamente el mensaje","SUCESS!!",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
             }
